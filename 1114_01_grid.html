@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            /* grid-template-columns: 200px 300px 400px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(3, 200px); */
+            /* grid-template-columns: repeat(2, minmax(200px,500px)); */
+            /* grid-template-columns: 200px 2fr 1fr; */
+            /* grid-template-columns: 200px 300px 400px; */
+            grid-template-columns: repeat(auto-fit,minmax(20%, auto));
+            /* grid-template-rows: 100px 50px;
+            grid-auto-rows: 300px; */
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+            background: #ddd;
+            padding: 10px;
+        }
+        .grid-item {
+            background: #ccc;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+</body>
+</html>

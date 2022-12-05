@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>picture</title>
+    <style>
+        .banner {
+            width: 1920px;
+            height: 500px;
+            border: 1px solid #000;
+        }
+        .banner:first-of-type {
+            background-image: url(images/photo1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: 50%; */
+        }
+        /* .banner:nth-of-type(2) {
+            text-align: center;
+            line-height: 500px;
+            overflow: hidden;
+        } */
+        .banner:nth-of-type(2) img {
+            width: 100px;
+            height: 100%;
+            object-fit: scale-down;
+            object-position: left top;
+        }
+    </style>
+</head>
+<body>
+    <picture>
+        <source media="(min-width:1280px)" srcset="images/photo1.jpg">
+        <source media="(min-width:1024px)" srcset="images/photo2.jpg">
+        <source media="(min-width:768px)" srcset="images/photo3.jpg">
+        <source media="(min-width:500px)" srcset="images/photo4.jpg">
+        <img src="images/photo5.jpg" alt="photo1">
+    </picture>
+    <div class="banner"></div>
+    <div class="banner">
+        <img src="images/photo1.jpg" alt="photo1">
+    </div>
+</body>
+</html>

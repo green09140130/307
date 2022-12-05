@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <title>icon</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+        .btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            background: #ccc;
+            border: none;
+        }
+        .btn:hover {
+            background: #ddd;
+        }
+        .btn span {
+            position: relative;
+            transition: all 0.5s;
+        }
+        .btn span::after {
+            position: absolute;
+            right: -20px;
+            content: "\00bb";
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .btn:hover span::after {
+            opacity: 1;
+            right: 0;
+        }
+        .btn:hover span {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="btn"><i class="fa-solid fa-house-user"></i></button>
+        <button class="btn"><i class="fa-solid fa-bars"></i></button>
+        <button class="btn"><i class="fa-solid fa-trash-can"></i></button>
+        <button class="btn"><i class="fa-solid fa-xmark"></i></button>
+        <button class="btn"><i class="fa-solid fa-folder"></i></button>
+    </div>
+    <div>
+        <button class="btn"><i class="fa-solid fa-house-user"></i><span> Home</span></button>
+        <button class="btn"><i class="fa-solid fa-bars"></i><span> Menu</span></button>
+        <button class="btn"><i class="fa-solid fa-trash-can"></i><span> Trash</span></button>
+        <button class="btn"><i class="fa-solid fa-xmark"></i><span> Close</span></button>
+        <button class="btn"><i class="fa-solid fa-folder"></i><span> Folder</span></button>
+    </div>
+</body>
+</html>

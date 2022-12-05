@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food style</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+            font-size: 0;
+        }
+        .top {
+            height: 24px;
+        }
+        .directory {
+            height: 13px;
+        }
+        .directory .food01, .directory .menu {
+            float: left;
+        }
+        .directory .menu {
+            margin-left: 300px;
+        }
+        .directory .menu ul li {
+            float: left;
+        }
+        .directory .menu ul li a {
+            font-size: 8px;
+            padding: 0 20px;
+        }
+        .directory .menu ul li a:hover {
+            text-decoration: underline;
+        }
+        .directory .food02 {
+            float: right;
+        }
+        .contents {
+            clear: both;
+            display: flex;
+            justify-content: center;
+            height: 744px;
+        }
+        .navi {
+            width: 149px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .number {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            border-left: 1px solid #ccc;
+        }
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #FDDEE1;
+            color: #E0A0A6;
+            font-size: 60px;
+            text-align: center;
+            line-height: 120px;
+        }
+        .rect {
+            width: 140px;
+            height: 30px;
+            background: #FDDEE1;
+            color: #E0A0A6;
+            font-size: 16px;
+            padding-left: 10px;
+            margin-top: 10px;
+            line-height: 30px;
+            box-sizing: border-box;
+        }
+        .nav {
+            font-size: 16px;
+        }
+        .nav-top {
+            margin-bottom: 150px;
+        }
+        
+        .nav-top ul, .nav-bottom ul {
+            width: 120px;
+            margin: 0 auto;
+        }
+        .nav-top ul li {
+            height: 30px;
+            border-bottom: 1px solid #ccc;;
+        }
+        .nav-top ul li a {
+            font-size: 12px;
+        }
+        .nav-bottom ul li{
+            width: 120px;
+            height: 40px;
+            background: #ddd;
+            line-height: 40px;
+            text-align: center;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+        .nav-bottom ul li a {
+            font-variant: small-caps;
+            font-size: 10px;
+        }
+        .bottom {
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="top"><img src="top.gif" alt=""></div>
+        <div class="directory">
+            <div class="food01"><img src="food_01.gif" alt="food_01"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">AUGUST/2003/</a></li>
+                    <li><a href="#">SUMMER</a></li>
+                    <li><a href="#">SPECIAL</a></li>
+                    <li><a href="#">E·MAGAZINE</a></li>
+                </ul>
+            </div>
+            <div class="food02"><img src="food_02.gif" alt="food_02"></div>
+        </div>
+        <div class="contents">
+            <div class="note"><img src="note.gif" alt="note"></div>
+            <div class="food"><img src="image.gif" alt="image"></div>
+            <div class="navi">
+                <div class="number">
+                    <div class="circle"><a href="http://www.naver.com">08</a></div>
+                    <div class="rect">FOOD & DIET</div>
+                </div>
+                <div class="nav">
+                    <div class="nav-top">
+                        <ul>
+                            <li><a href="#">01. contents</a></li>
+                            <li><a href="#">02. contents</a></li>
+                            <li><a href="#">03. contents</a></li>
+                            <li><a href="#">04. contents</a></li>
+                            <li><a href="#">05. contents</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-bottom">
+                        <ul>
+                            <li><a href="#">CONTENTS BANNER</a></li>
+                            <li><a href="#">CONTENTS BANNER</a></li>
+                            <li><a href="#">CONTENTS BANNER</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="page"><img src="page.gif" alt="page"></div>
+        </div>
+        <div class="bottom"><img src="bottom.gif" alt="bottom"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <style>
+        
+    </style>
+    <script>
+       const arr = ["홍길동", 100, 80, 70];
+       arr[4] = (arr[1] + arr[2] + arr[3]) / 3;
+       arr[5] = arr[1] + arr[2] + arr[3];
+    
+    document.write(arr[0] + "님의 평균은 "+ arr[4]+"점 입니다.<br>");
+       arr[6] = function() {
+        document.write(arr[0] + "님의 합계는 "+ arr[5]+"점 입니다.");
+       }
+       arr[6]();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

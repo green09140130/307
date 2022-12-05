@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #f00;
+        }
+        #sidenav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: #111;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        #sidenav ul {
+            width: 80%;
+            margin: 0 auto;
+        }
+        #sidenav ul li {
+            line-height: 40px;
+        }
+        #sidenav ul li .close {
+            display: block;
+            text-align: right;
+        }
+        .container {
+            cursor: pointer;
+            margin-left: 0;
+            padding: 20px 0 0 20px;
+            transition: 0.5s;
+        }
+        .container > div {
+            width: 35px;
+            height: 5px;
+            background: #333;
+            margin: 5px 0;
+            transition: transform 0.5s;
+        }
+        .active .bar1 {
+            transform: translate(0, 10px) rotate(-45deg);
+        }
+        .active .bar2 {
+            opacity: 0;
+        }
+        .active .bar3 {
+            transform: translate(0,-10px) rotate(45deg);
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="sidenav">
+        <ul>
+            <li><a href="javascript:" class="close" onclick="hide()">X</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="container" onclick="myfnc()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <span>Open</span>
+    </div>
+    
+    <script>
+        function myfnc() {
+            document.getElementById("sidenav").style.width = "250px";
+            document.getElementsByClassName("container")[0].style.marginLeft = "250px";
+        }
+        function hide() {
+            document.getElementById("sidenav").style.width = "0";
+            document.getElementsByClassName("container")[0].style.marginLeft = "0";
+        }
+    </script>
+</body>
+</html>

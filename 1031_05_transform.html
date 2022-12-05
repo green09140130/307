@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <style>
+        div {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            perspective: 800px;
+        }
+        img {
+            position: absolute;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+        }
+        img:first-child {
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+        img:nth-child(2) {
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        img:nth-child(3) {
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        img:nth-child(4) {
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+        img:nth-child(5) {
+            transform: translateZ(-200px);
+        }
+        img:nth-child(6) {
+            transform: translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="images/cubic_css1.jpg" alt="css1">
+        <img src="images/cubic_css2.jpg" alt="css2">
+        <img src="images/cubic_css3.jpg" alt="css3">
+        <img src="images/cubic_css4.jpg" alt="css4">
+        <img src="images/cubic_css5.jpg" alt="css5">
+        <!-- <img src="images/cubic_css6.jpg" alt="css6"> -->
+        
+    </div>
+</body>
+</html>

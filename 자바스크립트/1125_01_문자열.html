@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let x = 123;
+        let y = "123";
+        let c = 10.554;
+        let d = "34 45 50";
+        let e = parseFloat(c);
+        document.write(typeof x +"<br>"+typeof y +"<br>")
+        document.write(x +"<br>"+y +"<br>")
+        document.write(Number("123")+"<br>"+String(123)+"<br>");
+        document.write(Number("javacript")+"<br>");
+        document.write(x + y,"<br>");
+        document.write(x + Number(y),"<br>");
+        document.write(parseFloat(x),"<br>");
+        document.write(parseFloat(c),"<br>");
+        document.write(parseFloat(d),"<br>");
+        document.write(parseInt(c),"<br>");
+        document.write(typeof e,"<br>");
+        document.write(parseInt(c)+parseInt(c),"<br>");
+        document.write(String(10+10)+String(10),"<br>");
+        document.write(Number("10")+Number("10"),"<br>");
+        document.write(x.toString()+x.toString()+"<br>");
+        document.write((123).toString()+(123+10).toString()+"<br>");
+        let a = 1230000000;
+        let aa = 0.000000123;
+        let b = aa.toExponential();
+        document.write(typeof b + "<br>"+b+"<br>");
+        document.write((123.4537).toFixed(2)+"<br>");
+        document.write((123).toPrecision(8)+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

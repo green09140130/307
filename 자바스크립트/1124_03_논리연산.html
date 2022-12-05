@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+    <script>
+        let a = 20;
+        let b = "20";
+        let c = 10;
+        let d = a == b;
+        document.write("a는 c보다 크거나 a는 b랑 유형까지 같다 : ",
+         a > c || a === b,"<br>");
+        /*논리합(or)논리값이 하나라도 true이면 true반환 */ 
+        /*논리합(or)논리값이 모두 false이면 false반환 */ 
+        document.write("a는 c보다 크고 a는 b랑 유형까지 같다 : ",
+         a > c && a === b,"<br>");
+        /*논리곱(and)논리값이 모두 true이면 true반환 */ 
+        /*논리곱(and)논리값이 하나라도 false이면 false반환 */ 
+        document.write("a는 c보다 크거나 a는 b랑 유형까지 같다 : ",
+         !(a > c || a === b),"<br>");
+
+        //  let e = "50";
+        //  let f = + e;
+        //  document.write(e+"의 타입은"+ typeof e+"이고 "+f+"의 타입은"+typeof f);
+         let e = "john";
+         let f = + e;
+         document.write(e+"의 타입은"+ typeof e+"이고 "+f+"의 타입은"+typeof f);
+    </script>
+        
+    
+</head>
+<body>
+
+</body>
+</html>

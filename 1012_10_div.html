@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 100%;
+            max-width: 900px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .wrap > div {
+            width: 33.333%;
+            height: 300px;
+            float: left;
+        }
+        .wrap > div:first-child {
+            background: #ddd;
+        }
+        .wrap > div:nth-child(2) {
+            background: #eee;
+        }
+        .wrap > div:last-child {
+            background: #ccc;
+        }
+        .wrap1 > div {
+            border: 1px solid #000;
+        }
+        .wrap1 > div:first-child {
+            float: left;
+        }
+        .wrap1 > div:nth-child(2) {
+            float: right;
+        }
+        .wrap1 {
+            text-align: center;
+        }
+        .wrap1 > div:last-child {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="wrap1">
+        <div>first</div>
+        <div>second</div>
+        <div>thirfffffffffffd</div>
+    </div>
+</body>
+</html>

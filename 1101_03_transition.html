@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        body {
+            background: #ccc;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .col {
+            /* display: inline-block; */
+            /* float: left; */
+            margin: 10px;
+        }
+        .card {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+        }
+        .card .icon {
+            width: 100%;
+            height: 100%;
+            line-height: 200px;
+        }
+        .card .f-card {
+            position: absolute;
+            background: #fff;
+            /* opacity: 0.5; */
+            transition: all 0.5s;
+        }
+        .card .b-card {
+            background-color: #eee;
+            color: #f00;
+            box-shadow: inset 0 0 10px #ccc;
+        }
+        #model-1 .card:hover .f-card {
+            transform: translateX(-100%);
+        }
+        #model-2 .card:hover .f-card {
+            transform: translateX(100%);
+        }
+        #model-3 .card:hover .f-card {
+            transform: translateY(100%);
+        }
+        #model-4 .card:hover .f-card {
+            transform: translateY(-100%);
+        }
+        #model-5 .card .f-card {
+            transform-origin: 0 0;
+        }
+        #model-5 .card:hover .f-card {
+            transform: rotateX(180deg);
+        }
+        #model-6 .card .f-card {
+            transform-origin: 0 0;
+        }
+        #model-6 .card:hover .f-card {
+            transform: rotateY(180deg);
+        }
+        #model-7 .card .f-card {
+            transform-origin: 0 100%;
+        }
+        #model-7 .card:hover .f-card {
+            transform: rotateX(180deg);
+        }
+        #model-8 .card .f-card {
+            transform-origin: 100% 0;
+        }
+        #model-8 .card:hover .f-card {
+            transform: rotateY(180deg);
+        }
+        #model-9 .card .f-card {
+            transform-origin: 0 100%;
+        }
+        #model-9 .card:hover .f-card {
+            transform: rotate(180deg);
+        }
+        #model-10 .card .f-card {
+            transform-origin: 100% 100%;
+        }
+        #model-10 .card:hover .f-card {
+            transform: rotate(180deg);
+        }
+        #model-11 .card {
+            perspective: 500px;
+        }
+        #model-11 .card .f-card {
+            transform-origin: 0 0;
+        }
+        #model-11 .card:hover .f-card {
+            transform: rotateY(20deg);
+        }
+        #model-12 .card {
+            perspective: 500px;
+            overflow: hidden;
+        }
+        #model-12 .card .f-card {
+            transform-origin: 0 100%;
+        }
+        #model-12 .card:hover .f-card {
+            transform: rotateX(120deg);
+        }
+        #model-13 .card:hover .f-card {
+            transform: scale(0);
+        }
+        #model-14 .card {
+            transform: rotateX(0deg);
+            transform-origin: 0 0;
+            transition: all 0.5s;
+            transform-style: preserve-3d;
+        }
+        #model-14 .card .b-card {
+            transform: rotateX(-90deg);
+            transform-origin: 0 0;
+            transition: all 0.5s;
+        }
+        #model-14 .card:hover {
+            transform: rotateX(90deg);
+        }
+        #model-15 .card {
+            transform: rotateY(0deg);
+            transform-origin: 0 0;
+            transition: all 0.5s;
+            transform-style: preserve-3d;
+        }
+        #model-15 .card .b-card {
+            transform: rotateY(-90deg);
+            transform-origin: 0 0;
+            transition: all 0.5s;
+        }
+        #model-15 .card:hover {
+            transform: rotateY(90deg);
+        }
+        #model-16 .card {
+            transform: rotateY(0deg);
+            transition: all 0.5s;
+        }
+        #model-16 .card:hover {
+            transform: rotateY(180deg);
+        }
+        #model-17 .card {
+            transform: rotateX(0deg);
+            transition: all 0.5s;
+        }
+        #model-17 .card:hover {
+            transform: rotateX(180deg);
+        }
+        #model-18 .card:hover .f-card {
+            opacity: 0;
+        }
+        #model-19 .card .f-card {
+            transition: all 0.5s;
+        }
+        #model-19 .card:hover .f-card {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="col" id="model-1">
+        <div class="card">
+            <div class="f-card icon">fingerprint1</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-2">
+        <div class="card">
+            <div class="f-card icon">fingerprint2</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-3">
+        <div class="card">
+            <div class="f-card icon">fingerprint3</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-4">
+        <div class="card">
+            <div class="f-card icon">fingerprint4</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div><div class="col" id="model-5">
+        <div class="card">
+            <div class="f-card icon">fingerprint5</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-6">
+        <div class="card">
+            <div class="f-card icon">fingerprint6</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-7">
+        <div class="card">
+            <div class="f-card icon">fingerprint7</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-8">
+        <div class="card">
+            <div class="f-card icon">fingerprint8</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-9">
+        <div class="card">
+            <div class="f-card icon">fingerprint9</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-10">
+        <div class="card">
+            <div class="f-card icon">fingerprint10</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-11">
+        <div class="card">
+            <div class="f-card icon">fingerprint11</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-12">
+        <div class="card">
+            <div class="f-card icon">fingerprint12</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-13">
+        <div class="card">
+            <div class="f-card icon">fingerprint13</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-14">
+        <div class="card">
+            <div class="f-card icon">fingerprint14</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-15">
+        <div class="card">
+            <div class="f-card icon">fingerprint15</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-16">
+        <div class="card">
+            <div class="f-card icon">fingerprint16</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-17">
+        <div class="card">
+            <div class="f-card icon">fingerprint17</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-18">
+        <div class="card">
+            <div class="f-card icon">fingerprint18</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+    <div class="col" id="model-19">
+        <div class="card">
+            <div class="f-card icon">fingerprint19</div>
+            <div class="b-card icon">favorite</div>
+        </div>
+    </div>
+</body>
+</html>

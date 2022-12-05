@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let jum = prompt("점수를 입력해 주세요","0");
+        confirm("당신이 입력한 점수는 "+ jum +"이 맞습니까?");
+        let hakjum;
+        if(jum >= 90) {
+            hakjum ="A";
+        } else if(jum >= 80) {
+            hakjum ="B";
+        } else if(jum >= 70) {
+            hakjum ="C";
+        } else if(jum >= 60) {
+            hakjum ="D";
+        } else {
+            hakjum ="F";
+        }
+        document.write("당신의 학점은 " + hakjum + "학점입니다");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

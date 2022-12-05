@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+    <style>
+      .on {
+        background: #ccc;
+        padding: 10px;
+      }
+      .active {
+        background: #f00;
+        padding: 10px;
+      }
+    </style>
+    <script>
+      function fnc() {
+        let x = document.getElementById("div1");
+        if (x.className == "on") {
+          //x.className = "active";
+          //x.className = x.className.replace("on", "active");
+          //x.className = x.className.concat(" active");
+          x.className += " active";
+          //x.className = x.className + " active";
+        } else {
+          x.className = "on";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="div1" class="on">오늘은 금요일입니다.</div>
+    <button onclick="fnc()">서식바꾸기</button>
+  </body>
+</html>

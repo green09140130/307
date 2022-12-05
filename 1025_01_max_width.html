@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        ul li {
+            width: 200px;
+            height: 150px;
+            position: relative;
+            cursor: pointer;
+        }
+        ul li::after {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            left: 0;
+            top: 0;
+            text-align: center;
+            line-height: 150px;
+            color: #fff;
+        }
+        ul li:first-child::after {
+            content: "photo1이미지";
+        }
+        ul li:nth-child(2)::after {
+            content: "photo2이미지";
+        }
+        ul li:nth-child(3)::after {
+            content: "photo3이미지";
+        }
+        ul li:nth-child(4)::after {
+            content: "photo4이미지";
+        }
+        ul li:hover::after {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <img src="images/photo1.jpg" alt="photo1">
+        </li>
+        <li>
+            <img src="images/photo2.jpg" alt="photo2">
+        </li>
+        <li>
+            <img src="images/photo3.jpg" alt="photo3">
+        </li>
+        <li>
+            <img src="images/photo4.jpg" alt="photo4">
+        </li>
+    </ul>
+</body>
+</html>

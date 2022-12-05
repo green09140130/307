@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자정의함수</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+    <script>
+      function on() {
+        //document.getElementById("ch").src = "images/pic_bulbon.gif";
+        let photo = document.getElementById("ch");
+        photo.setAttribute("src", "images/pic_bulbon.gif");
+        photo.setAttribute("alt", "on");
+      }
+      function off() {
+        document.getElementById("ch").src = "images/pic_bulboff.gif";
+        document.getElementById("ch").alt = "off";
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="on()">Turn on the light</button>
+    <img src="images/pic_bulbon.gif" alt="on" id="ch" />
+    <button onclick="off()">Turn off the light</button>
+  </body>
+</html>

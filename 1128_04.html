@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+        let txt = "";
+        numbers.forEach(myFunction);
+        document.write(txt);
+        function myFunction(value, index, array) {
+            //txt += value + "<br>";
+            //txt += index + "<br>";
+            txt += array + "<br>";
+            }
+        const fruits = ["Banana", "Orange", "Banana", "Mango"];
+        const fruits2 = {오전: "바나나",오후: "사과", 저녁: "망고"};
+        document.write(Object.keys(fruits)+"<br>");
+        document.write(Object.keys(fruits2)+"<br>");
+        document.write(fruits.indexOf("키위")+"<br>");
+        document.write(fruits.lastIndexOf("키위")+"<br>");
+        let fruits3 = fruits instanceof Array;
+        let fruits4 = fruits2 instanceof Array;
+        document.write(fruits3+"<br>");
+        document.write(fruits4+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

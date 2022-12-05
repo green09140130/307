@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for</title>
+    <style></style>
+    <script>
+      let chcolor = [
+        "white",
+        "#f00",
+        "#0f0",
+        "#00f",
+        "aqua",
+        "purple",
+        "yellow",
+      ];
+      let i = 0;
+      function color_change() {
+        i++;
+        if (i > 6) {
+          i = 0;
+        }
+        console.log(i);
+        document.querySelector("body").style.backgroundColor = chcolor[i];
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="color_change()">배경색 바꾸기</button>
+  </body>
+</html>

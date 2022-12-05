@@ -1,0 +1,14 @@
+background: #555;
+마우스를 올리면 색상이 변경됩니다.
+애니메이션은 여러 단계를 통한 변환 효과도 가능합니다.
+box-shadow: 10px 10px 10px rgba(0,0,0,0.3),
+                  inset 0 0 10px rgba(255,255,255,0.5),
+                  inset 0 0 50px rgba(255,255,255,0.5);
+background: #8ac007;
+background: #333;
+
+background: #8ac007;
+background: #07bec0;
+background: #c07d07;
+background: #333;
+background: #8ac007;

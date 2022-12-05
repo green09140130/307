@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        input[type=radio] {
+            display: none;
+        }
+        ul.box {
+            position: relative;
+            width: 500px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        ul.box li {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+        }
+        .pipe {
+            background: url(images/pipe.png);
+        }
+        .pro {
+            background: url(images/propeller.png);
+        }
+        ul.btnbox {
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        ul.btnbox li {
+            width: 100px;
+        }
+        ul.btnbox li label {
+            display: block;
+            cursor: pointer;
+            /* background: #ccc; */
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 50px;
+        }
+         /* #left:checked ~ ul.btnbox li:first-child label {
+            background: #000;
+            color: #fff;
+        }
+        #right:checked ~ ul.btnbox li:nth-child(2) label {
+            background: #000;
+            color: #fff;
+        }
+        #off:checked ~ ul.btnbox li:nth-child(3) label {
+            background: #000;
+            color: #fff;
+        } */
+        #left:checked ~ ul.btnbox li:first-child label,
+        #right:checked ~ ul.btnbox li:nth-child(2) label,
+        #off:checked ~ ul.btnbox li:nth-child(3) label {
+            background: #000;
+            color: #fff;
+        }
+        @keyframes left {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(-1080deg);}
+        }
+        @keyframes right {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(1080deg);}
+        }
+        #left:checked ~ ul.box .pro {
+            /* animation-name: left;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; */
+            animation: left 2s linear infinite;
+        }
+        #right:checked ~ ul.box .pro {
+            /* animation-name: right;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite; */
+            animation: right 2s linear infinite;
+        }
+        #off:checked ~ ul.box .pro {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="btn" id="left" checked>
+    <input type="radio" name="btn" id="right">
+    <input type="radio" name="btn" id="off">
+    <ul class="box">
+        <li class="pipe"></li>
+        <li class="pro"></li>
+    </ul>
+    <ul class="btnbox">
+        <li><label for="left">turn left</label></li>
+        <li><label for="right">turn right</label></li>
+        <li><label for="off">off</label></li>
+    </ul>
+</body>
+</html>

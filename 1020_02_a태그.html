@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a링크</title>
+    <style>
+        body {
+            background: #ccc;
+        }
+        #wrap {
+            width: 80%;
+            margin: 50px;
+            background: #f4f4f4;
+        }
+        #new1, #new2, span {
+            display: none;
+        }
+        :target {
+            border: 1px solid #000;
+            background: #dadada;
+        }
+        #new1:target, #new2:target, #new1:target ~ span {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p><a href="#new1">jump to new content1</a></p>
+        <p id="new1">new content1</p>
+        <span>하나</span>
+        <span>둘</span>
+        <span>셋</span>
+        <p><a href="#new2">jump to new content2</a></p>
+        <p id="new2">new content2</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+body {
+    font-family: Arial, "맑은 고딕", sans-serif;
+}
+#top {
+    background: #003f85;
+}
+.top_wrap {
+    width: 1182px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    /* padding: 10px 0; */
+    display: flex;
+    justify-content: end;
+    background: #003f85;
+}
+.top_wrap ul {
+    display: flex;
+}
+.top_wrap ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+.top_wrap ul li a::after {
+    display: inline-block;
+    content: "/";
+    padding: 0 10px;
+}
+.top_wrap ul li:last-child a::after {
+    content: "";
+}
+.top_wrap ul li a:hover {
+    text-decoration: underline;
+}
+#logo {
+    width: 1182px;
+    margin: 50px auto;
+    text-align: center;
+}
+#gnb, #visual {
+    width: 837px;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+#gnb ul {
+    display: flex;
+    justify-content: space-around;
+}
+#visual {
+    height: 200px;
+}
+#visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: 0 0; */
+    object-fit: left top;
+}
+#icon {
+    width: 837px;
+    margin: 0 auto;
+}
+#icon ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+#icon ul li {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+#icon p {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    border-radius: 50%;
+    left: 2px;
+    top: 3px;
+    background: #fff;
+    text-align: center;
+    line-height: 100px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+#icon ul li:hover p{
+    display: block;
+}
+#item {
+    width: 1182px;
+    margin: 0 auto;
+}
+#item ul {
+    display: flex;
+}
+#item ul li {
+    position: relative;
+}
+#item ul li p {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    padding-top: 130px;
+    box-sizing: border-box;
+    color: #fff;
+}
+#banner {
+    width: 1182px;
+    margin: 0 auto;
+    height: 313px;
+}
+#banner ul {
+    display: flex;
+}
+#foot {
+    height: 100px;
+    background: #002856;
+}
+#foot .foot_wrap {
+    width: 1182px;
+    margin: 0 auto;
+    background: #002856;
+}
+#foot .foot_wrap ul {
+    display: flex;
+    justify-content: space-between;
+}
+#foot .foot_wrap ul li {
+    line-height: 100px;
+}
+#foot .foot_wrap ul img {
+    vertical-align: middle;
+}

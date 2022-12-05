@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Menu</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        li {
+            border: 1px solid #000;
+            text-align: center;
+        }
+        li span {
+            transform: scale(1.3);
+            filter: blur(15px);
+        }
+        li p {
+            font-size: 50px;
+            letter-spacing: 50px;
+            opacity: 0;
+            transition: all 1s;
+            
+        }
+        li:hover p{
+            opacity: 1;
+            letter-spacing: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <span>건축에 문화를 더하다</span>
+        <li><p>건축에 문화를 더하다</p></li>
+    </ul>
+</body>
+</html>

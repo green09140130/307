@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .parent {
+            display: flex;
+            border: 1px solid #f00;
+        }
+        .child {
+            border: 1px solid #00f;
+        }
+        .parent1 {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #f00;
+        }
+        .parent2 {
+            display: flex;
+            justify-content: end;
+            border: 1px solid #f00;
+        }
+        .top {
+            display: flex;
+            justify-content: center;
+            border: 1px solid #0f0;
+        }
+        .top1 {
+            text-align: center;
+            border: 1px solid #0f0;
+        }
+        .top1 .parent1 {
+            display: inline-block;
+        }
+        .top1 .parent2 {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex는 부모요소에 설정한다.</h1>
+    <div class="parent">
+        <div class="child"><h2>child1</h2></div>
+        <div class="child"><h2>child2</h2></div>
+        <div class="child"><h2>child3</h2></div>
+    </div>
+    
+    <img src="images/flex_01.JPG" alt="">
+    <img src="images/flex_011.JPG" alt="">
+    
+    <div class="parent1">
+        <div class="child"><h2>child</h2></div>
+    </div>
+    <div class="parent2">
+        <div class="child"><h2>child</h2></div>
+    </div>
+    <h2>상위요소에 Flex를 설정하고 justify-content: center  로 지정하고 justify-content: end로 지정하여도 부모 요소는 block이므로 위치상 아래로 온다</h2>
+    <img src="images/flex_02.JPG" alt="">
+    <img src="images/flex_022.JPG" alt="" width="400">
+    
+        <div class="top">
+            <div class="parent1">
+                <div class="child"><h2>child1</h2></div>
+            </div>
+        
+            <div class="parent2">
+                <div class="child"><h2>child2</h2></div>
+            </div>
+        </div>
+        <h2>상위요소에 Flex를 설정하고 justify-content: center  로 지정하면 하위요소는 모두 가운데로 지정된다</h2>
+        <img src="images/flex_03.JPG" alt="">
+        <img src="images/flex_033.JPG" alt="">
+        
+        <div class="top1">
+            <div class="parent1"><h2>child1</h2></div>
+            <div class="parent2"><h2>child2</h2></div>
+        </div>
+        <h2>부모요소에 text-align: center 를 설정하고 child1 요소에는 display: inline-block 로 지정하고 child2요소는 float: right 설정한다.</h2>
+        <img src="images/flex_04.JPG" alt="">
+        <img src="images/flex_044.JPG" alt="">
+</body>
+</html>

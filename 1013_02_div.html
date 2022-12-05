@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 80%;
+            margin: 0 auto;
+            background: #ccc;
+            text-align: center;
+        }
+        .b {
+            width: 25%;
+            background: #000;
+            color: #fff;
+            text-align: left;
+        }
+        div.a > div {
+            background: #ccc;
+        }
+        #a div {
+            border: 1px solid #000;
+        }
+        #a > div:first-of-type {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">a
+        <p>문단태그</p>
+        <div>b
+            <div class="c">c</div>
+        </div>
+        <div>b
+            <div class="c">c</div>
+        </div>
+        <div>b</div>
+    </div>
+</body>
+</html>

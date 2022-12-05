@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Growth Clinic Story</title>
+    <style>
+        .banner {
+            width: 1440px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .box_wrap {
+            width: 33.333%;
+            height: 400px;
+            float: left;
+        }
+        .box {
+            height: 400px;;
+        }
+        .box_wrap:first-child .box {
+            background: #ccc;
+        }
+        .box_wrap:nth-child(2) .box {
+            background: #ddd;
+            margin-left: 120px;
+        }
+        .box_wrap:last-child .box {
+            background: #ccc;
+            margin-left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="box_wrap">
+            <div class="box"></div>
+        </div>
+        <div class="box_wrap">
+            <div class="box"></div>
+        </div>
+        <div class="box_wrap">
+            <div class="box"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu</title>
+    <style>
+        .container {
+            cursor: pointer;;
+        }
+        .container > div {
+            width: 35px;
+            height: 5px;
+            background: #333;
+            margin: 5px 0;
+            transition: transform 0.5s;
+        }
+        .active .bar1 {
+            transform: translate(0, 10px) rotate(-45deg);
+        }
+        .active .bar2 {
+            opacity: 0;
+        }
+        .active .bar3 {
+            transform: translate(0,-10px) rotate(45deg);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container" onclick="myfnc()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <script>
+        function myfnc() {
+            document.getElementsByClassName("container")[0].classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            /* height: 300px; */
+            overflow: hidden;
+        }
+        .wrap > div {
+            float: left;
+            width: 33.333%;
+            /* height: 300px; */
+        }
+        .wrap > div:first-child {
+            background: #ccc;
+        }
+        .wrap > div:nth-child(2) {
+            background: rgb(183, 182, 182);
+        }
+        .wrap > div:last-child {
+            background: rgb(230, 227, 227);
+        }
+        .wrap1 {
+            text-align: center;
+        }
+        .wrap1 div:first-child {
+            float: left;
+        }
+        .wrap1 div:last-child {
+            float: right;
+        }
+        .wrap1 div:nth-child(2) {
+            /* clear: both;  */
+            float: left;
+            /* display: inline-block;*/
+        }
+        .wrap1 > div {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+        <div>Lorem Ipsum is simply dummy text of</div>
+        <div>Lorem Ipsum is simply dummy text of</div>
+    </div>
+    <div class="wrap1">
+        <div>첫번째</div>
+        <div>두번째입니다</div>
+        <div>세번째</div>
+    </div>
+</body>
+</html>

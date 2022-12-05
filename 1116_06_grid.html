@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid-container {
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid #000;
+        }
+        .grid-item:first-child {
+            grid-area: 1 / 1 / 2 / 2;
+            z-index: 1;
+            /*grid-area: row-start/column-start/row-end/column-end */
+        }
+        .grid-item:nth-child(2) {
+            grid-area: 1 / 1 / 2 / 2;
+            /* opacity: 0.5; */
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+           text-decoration: none; 
+           color: #000;
+        }
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        .case_flex {
+            display: flex;
+            background: #ddd;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        .case_flex .nav {
+            width: 50%;
+            background: #ccc;
+        }
+        .case_flex .nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .case_float {
+            background: #ccc;
+            overflow: hidden;
+        }
+        .case_float .logo {
+            float: left;
+        }
+        .case_float .nav {
+            float: right;
+        } 
+        .case_float .nav ul li {
+            float: left;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="case_flex">
+            <div class="logo">logo</div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="case_float">
+            <div class="logo">logo</div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                    <li><a href="#">메뉴4</a></li>
+                    <li><a href="#">메뉴5</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

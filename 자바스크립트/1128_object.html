@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <style>
+        body {
+
+        }
+    </style>
+    <script>
+       // const person = {first:"ha", last:"sook",age:20,fullname:function(){return this.first + " "+this.last}};
+        const person = {
+            firstname: "ha",
+            lastname: "euisook",
+            age: 20,
+            fullname: function() {
+                return this.firstname + " " + this.lastname;
+            }
+        };
+        let firstname = "ha";
+        let lastname = "euisook";
+        let age = 20;
+        let fullname = firstname + " " + lastname ;
+
+        document.write(person.fullname()+"<br>");
+        document.write(person.fullname+"<br>");
+        const cars = {};
+        cars.model = "소형";
+        cars.price = 1000000;
+        cars.color = "black";
+        document.write(cars.color+"<br>");
+
+        const man = new Object();
+        man.firstname = "john";
+        man.lastname = "doe";
+        man.age = 30;
+        document.write(man.firstname + " " + man.lastname + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

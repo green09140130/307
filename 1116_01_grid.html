@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            height: 500px;
+            background: #ddd;
+            grid-template-columns: 100px 200px 300px;
+            /* justify-content: space-evenly;
+            align-content: stretch; */
+            /* place-content: align-content justify-content; */
+            place-content: space-between;
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+</body>
+</html>

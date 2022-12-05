@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-areas: "header header"
+                                ". ."
+                                 "a main"
+                                 ". ."
+                                 "footer footer";
+            background: #ddd;
+            padding: 10px;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid #000;
+        }
+        .item1 {
+            grid-area: header;
+        }
+        .item2 {
+            grid-area: a;
+        }
+        .item3 {
+            grid-area: main;
+        }
+        .item4 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+    </div>
+</body>
+</html>

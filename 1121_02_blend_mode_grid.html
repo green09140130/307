@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mix-blend-mode</title>
+    <style>
+        .image-container {
+            background: url(images/photo1.jpg);
+            background-size: cover;
+            height: 500px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        .text {
+            background: #fff;
+            color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 160px;
+            font-weight: bold;
+            padding: 10px 30px;
+            text-align: center;
+            mix-blend-mode: screen;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <div class="text">HTML & CSS</div>
+    </div>
+</body>
+</html>

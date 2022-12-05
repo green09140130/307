@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for</title>
+    <!-- <script>
+      let sum = 0;
+      for (let i = 0; i <= 100; i += 2) {
+        //document.write(i + "<br>");
+        sum += i; //sum = sum + i;
+      }
+      document.write("1부터 100까지 짝수의 합계 : " + sum + "<br>");
+    </script> -->
+    <script>
+      for (let i = 1; i <= 100; i++) {
+        if (i % 5 == 0 && i % 7 != 0) {
+          document.write('<p style="color:red">' + i + "</p>");
+        } else if (i % 5 != 0 && i % 7 == 0) {
+          document.write('<p style="color:blue">' + i + "</p>");
+        } else if (i % 5 == 0 && i % 7 == 0) {
+          document.write('<p style="color:green">' + i + "</p>");
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

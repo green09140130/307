@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for</title>
+    <style></style>
+    <script>
+      function ok() {
+        // alert("예 담배를 피웁니다");
+        document.querySelector("#content").style.backgroundColor = "red";
+      }
+      function no() {
+        alert("아니오 담배를 피우지 않습니다");
+      }
+    </script>
+  </head>
+  <body>
+    <p class="p01">담배를 피우십니까?</p>
+    <button onclick="ok()">예</button>
+    <button onclick="no()">아니오</button>
+    <p class="p01" id="content">문단태그</p>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        p {
+            width: 100px;
+            height: 100px;
+            background: #8ac007;
+            animation-name: move;
+            animation-duration: 2s;
+            animation-delay: 1s;
+        }
+        @keyframes move {
+            0% {background: red; transform: translateX(0);}
+            100% {background: blue; transform: translateX(500px);}
+        }
+        .none {
+            animation-fill-mode: none;
+        }
+        .forwards {
+            animation-fill-mode: forwards;
+        }
+        .backwards {
+            animation-fill-mode: backwards;
+        }
+        .both {
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body>
+    <p class="none"></p>
+    <p class="forwards"></p>
+    <p class="backwards"></p>
+    <p class="both"></p>
+</body>
+</html>

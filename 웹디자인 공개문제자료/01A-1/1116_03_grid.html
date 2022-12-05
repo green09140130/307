@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .grid-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px 200px 100px;
+            
+        }
+        .grid-item:first-child {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 40px;
+/*            background: #aaa;*/
+            /* grid-column: 1 / 4; */
+            grid-column: 1 / span 3;
+            align-content: center;
+        }
+        .grid-item:first-child .logo {
+            /* background: #f00; */
+        }
+        .grid-item:first-child .menu {
+            /* background: #0f0; */
+            display: flex;
+            justify-content:flex-end;
+        }
+        .grid-item:first-child .menu > ul {
+            display: flex;
+            text-align: center;
+            cursor: pointer;
+            background: #fff;
+            width: 50%;
+        }
+        .grid-item:first-child .menu > ul > li {
+            position: relative;
+            width: 25%;
+            height: 40px;
+        }
+        .grid-item:first-child .menu > ul > li > a {
+            border-left: 1px solid #000;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        .grid-item:first-child .menu > ul > li:last-child a {
+            border-right: 1px solid #000;
+        }
+        .grid-item:first-child .menu > ul > li > a {
+            display: block;
+            height: 41px;
+            line-height: 40px;
+/*
+            line-height: 35px;
+            box-sizing: border-box;
+*/
+        }
+        .grid-item:first-child .menu ul li ul {
+            width: 100%;
+            display: block;
+            background: #fff;
+            
+        }
+        .grid-item:first-child .menu ul:hover ul {
+            display: block;
+        }
+        .grid-item:first-child .menu > ul > li ul > li {
+            position: relative;
+            
+/*            left: -1px;*/
+            line-height: 30px;
+            
+        }
+        .grid-item:first-child .menu > ul > li:first-child ul > li a {
+            border-left: 1px solid #000;
+/*            left: -1px;*/
+        }
+        .grid-item:first-child .menu > ul > li:last-child ul > li a{
+            border-right: 1px solid #000;
+        }
+        .grid-item:first-child .menu > ul > li ul li:last-child a{
+            border-bottom: 1px solid #000;
+        }
+        .grid-item:first-child .menu li ul li a {
+            display: block;
+        }
+        .grid-item:nth-child(2) {
+/*            background: #bbb;*/
+            grid-column: 1 / span 3;
+        }
+        .grid-item:nth-child(3) {
+/*            background: #ccc;*/
+        }
+        .grid-item:nth-child(4) {
+            background: #ddd;
+        }
+        .grid-item:nth-child(5) {
+            background: #eee;
+        }
+        .grid-item:nth-child(6) {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            /* grid-template-rows: 40px; */ /*높이를 안줘야 다 들어감*/
+            /* background: #000; */
+            /* color: #fff; */
+            grid-column: 1 / span 3;
+            align-content: center;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+        }
+        .grid-item:nth-child(6) .logo {
+            /* background: #f00; */
+        }
+        .grid-item:nth-child(6) .copyright {
+            /* background: #0f0; */
+        }
+        .grid-item:nth-child(6) .sns {
+            /* background: #00f; */
+            cursor: pointer;
+        }
+        .grid-item:nth-child(6) .sns li {
+            border: 1px solid #000;
+        }
+        .grid-item:nth-child(6) .sns ul li ul {
+            /* display: none; */
+        }
+        .grid-item:nth-child(6) .sns ul:hover li ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="logo"><img src="images/logo.jpg" alt=""></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">menu1</a> 
+                        <ul>
+                            <li><a href="#">menu1</a></li>
+                            <li><a href="#">menu1</a></li>
+                            <li><a href="#">menu1</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu2</a>
+                        <ul>
+                            <li><a href="#">menu2</a></li>
+                            <li><a href="#">menu2</a></li>
+                            <li><a href="#">menu2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu3</a>
+                        <ul>
+                            <li><a href="#">menu3</a></li>
+                            <li><a href="#">menu3</a></li>
+                            <li><a href="#">menu3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu4</a>
+                        <ul>
+                            <li><a href="#">menu4</a></li>
+                            <li><a href="#">menu4</a></li>
+                            <li><a href="#">menu4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="grid-item">slide</div>
+        <div class="grid-item">contents1</div>
+        <div class="grid-item">contents2</div>
+        <div class="grid-item">contents3</div>
+        <div class="grid-item">
+            <div class="logo"><img src="images/logo_foot.jpg" alt=""></div>
+            <div class="copyright">copyright<br>JUST Shop | 주소 : 부산광역시 부산진구 초읍동 성지로 84 | TEL.051-456-2580 | FAX.051-456-7890<br>이사이트의 모든 이미지와 컨텐츠의 불법도용 및 복제를 금지합니다. - 저스트쇼핑몰</div>
+            <div class="sns">
+                <ul>
+                    <li>sns
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Instagram</li>
+                            <li>twitter</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

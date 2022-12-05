@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+       body {
+        background: #fff9ec;
+        color: #504326;
+       }
+       ul {
+        list-style: none;
+       }
+       a {
+        text-decoration: none;
+        color: #504326;
+       }
+       .gnb {
+            width: 300px;
+            margin: 0 auto;
+            height: 20px;
+            cursor: pointer;
+            border: 1px solid #ded3bb;
+            padding: 10px;
+       }
+       .menu ul {
+        display: none;
+       }
+       .menu .icon {
+        display: inline-block;
+        transition: transform 1s ease-in-out;
+       }
+       .menu:hover .icon {
+        transform: rotate(45deg);
+       }
+       .menu:hover ul {
+        display: block;
+       }
+    </style>
+</head>
+<body>
+    <div class="gnb">
+        <div class="menu" id="menu1">
+            <span class="icon">+ </span><a href="#menu1">DropDown Menu</a>
+            <ul>
+                <li><a href="#">menu01</a></li>
+                <li><a href="#">menu02</a></li>
+                <li><a href="#">menu03</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

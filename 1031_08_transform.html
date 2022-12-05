@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDIV { 
+            height:300px;
+        }
+        #div1 { 
+            
+            position: relative; 
+            margin: auto; 
+            height: 150px; 
+            width: 250px; 
+            padding: 10px; 
+            border: 1px solid black; 
+            perspective: 600px;
+        }
+        #div2 { 
+            padding: 50px; 
+            position: absolute; 
+            border: 1px solid black; 
+            background-color: red;
+            transform: rotateX(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="myDIV">
+        <div id="div1">DIV1
+            <div id="div2">Think that you are looking at a wall of a building. See what happens with the perspective when you gradually move 
+            closer to the building. </div>
+       </div> 
+    </div>
+</body>
+</html>

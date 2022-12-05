@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+    <script>
+        let area = prompt("지역을 입력해 주세요");
+        let area_num;
+        if(area == "서울" || area == "seoul" || area == "Seoul" ||area == "s" || area == "S") {
+            area_num = "02";
+            area = "서울";
+        } else if(area == "대전") {
+            area_num = "042";
+        } else if(area == "부산") {
+            area_num = "051";
+        } else {
+            area_num = "등록되지 않은 지역";
+        }
+        document.write("입력하신 지역은 " , area , "이고 지역번호는 ", area_num , "입니다");
+    </script>   
+    
+</head>
+<body>
+    
+</body>
+</html>

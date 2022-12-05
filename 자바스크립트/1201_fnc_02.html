@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .tab_left {
+            float: left;
+            width: 30%;
+            height: 300px;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .tablink {
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            cursor: pointer;
+        }
+        .tablink:hover {
+            background: #ddd;
+        }
+        .tab_right {
+            position: relative;
+            float: left;
+            width: 70%;
+            height: 300px;
+            background: #ddd;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        .tabcontent {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab_left">
+        <p class="tablink" onmouseover="tab(0)">content1</p>
+        <p class="tablink" onmouseover="tab(1)">content2</p>
+        <p class="tablink" onmouseover="tab(2)">content3</p>
+    </div>
+    <div class="tab_right">
+        <div class="tabcontent">
+            <h1>content1</h1>
+        </div>
+        <div class="tabcontent">
+            <h1>content2</h1>
+        </div>
+        <div class="tabcontent">
+            <h1>content3</h1>
+        </div>
+    </div>
+   <script>
+    window.open("1201_fnc_01.html","함수연습","width=500,height=500");
+    let content = document.getElementsByClassName("tabcontent");
+    let btn = document.getElementsByClassName("tablink");
+    function tab(j) {
+        for(let i =0; i <btn.length;i++){
+            content[i].style.display ="none";
+            content[j].style.display ="block";
+        }
+    }
+    tab(0);
+   </script>
+</body>
+</html>

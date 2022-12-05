@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       body {
+            background: #fff9ec;
+            color: #504326;
+       }
+       ul {
+            list-style: none;
+       }
+       a {
+            text-decoration: none;
+            color: #504326;
+       }
+       .menu {
+            width: 300px;
+            margin: 0 auto;
+            cursor: pointer;
+            border: 1px solid #ded3bb;
+            padding: 10px 0;
+       }
+       
+       .menu .icon {
+            display: inline-block;
+            animation: icon_out 0.5s;
+       }
+       .menu:target .icon {
+            animation: icon_over 0.5s forwards;
+       }
+       .menu ul {
+            background: #fff;
+            height: 0;
+            overflow: hidden;
+            transition: height 1s;
+       }
+       .menu:target ul {
+            height: 90px;
+       }
+       @keyframes icon_over {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(45deg);}
+       }
+       @keyframes icon_out {
+            0% {transform: rotate(45deg);}
+            100% {transform: rotate(0deg);}
+       }
+    </style>
+</head>
+<body>
+    <div class="gnb">
+        <div class="menu" id="menu1">
+            <span class="icon">+ </span><a href="#menu1">DropDown Menu</a>
+            <ul>
+                <li><a href="#">menu01</a></li>
+                <li><a href="#">menu02</a></li>
+                <li><a href="#">menu03</a></li>
+            </ul>
+        </div>
+        <div class="menu" id="menu2">
+            <span class="icon">+ </span><a href="#menu2">DropDown Menu</a>
+            <ul>
+                <li><a href="#">menu01</a></li>
+                <li><a href="#">menu02</a></li>
+                <li><a href="#">menu03</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

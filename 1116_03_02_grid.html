@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid-container {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px 200px 100px;
+            
+        }
+        .grid-item:first-child {
+            display: grid;
+            grid-template-columns: 200px auto;
+            grid-template-rows: 40px;
+            /* background: #aaa; */
+            /* grid-column: 1 / 4; */
+            grid-column: 1 / span 3;
+            align-content: center;
+        }
+        .grid-item:first-child .logo {
+            background: #f00;
+        }
+        .grid-item:first-child .menu {
+            background: #0f0;
+        }
+        .grid-item:nth-child(2) {
+            /* background: #bbb; */
+            grid-column: 1 / span 3;
+        }
+        .grid-item:nth-child(3) {
+            background: #ccc;
+        }
+        .grid-item:nth-child(4) {
+            background: #ddd;
+        }
+        .grid-item:nth-child(5) {
+            background: #eee;
+        }
+        .grid-item:nth-child(6) {
+            display: grid;
+            grid-template-columns: 200px auto 200px;
+            grid-column: 1 / span 3;
+        }
+        .grid-item:nth-child(6) > div {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+        .grid-item:nth-child(6) > div:first-child {
+            background: #f00;
+        }
+        .grid-item:nth-child(6) > div:nth-child(2) {
+            background: #0f0;
+        }
+        .grid-item:nth-child(6) > div:last-child {
+            background: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="logo"></div>
+            <div class="menu"></div>
+        </div>
+        <div class="grid-item">slide</div>
+        <div class="grid-item">contents1</div>
+        <div class="grid-item">contents2</div>
+        <div class="grid-item">contents3</div>
+        <div class="grid-item">
+            <div>
+                <div class="logo">로고</div>
+            </div>
+            <div>
+                <div class="copyright">copyright<br>copyright<br>copyright</div>
+            </div>
+            <div>
+                <div class="sns">sns</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

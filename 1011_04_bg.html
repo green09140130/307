@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 100px;
+            height: 100px;
+            border: 10px solid rgba(0,0,0,0.3);
+            padding: 20px;
+            background-color: #f00;
+        }
+        p:first-child {
+            background-clip: border-box;
+        }
+        p:nth-child(2) {
+            background-clip: content-box;
+        }
+        p:nth-child(3) {
+            background-clip: padding-box;
+        }
+        p:nth-child(4),p:nth-child(5),p:nth-child(6) {
+            background-image: url(images/photo1.jpg);
+            background-repeat: no-repeat;
+        }
+        p:nth-child(4) {
+            background-origin: border-box;
+        }
+        p:nth-child(5) {
+            background-origin: content-box;
+        }
+        p:nth-child(6) {
+            background-origin: padding-box;
+        }
+    </style>
+</head>
+<body>
+    <p>border-box</p>
+    <p>content-box</p>
+    <p>padding-box</p>
+    <p>border-box</p>
+    <p>content-box</p>
+    <p>padding-box</p>
+</body>
+</html>

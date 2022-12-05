@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fontSize</title>
+    <style>
+        html {
+            font-size: 200%;
+        }
+        body {
+            font: 16px Arial, sans-serif;
+        }
+        #wrap {
+            font-size: 8px;
+        }
+        #wrap > div {
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+        .a {
+            width: 160px;
+            height: 160px;
+        }
+        .b {
+            font-size: 50%;
+            width: 10em;
+            height: 10em;
+        }
+        .c {
+            width: 10rem;
+            height: 10rem;
+        }
+        .d {
+            width: 50vw;
+            min-height: 100px;
+        }
+        .e {
+            height: 50vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="a">a</div>
+        <div class="b">b</div>
+        <div class="c">c</div>
+        <div class="d">d</div>
+        <div class="e">e</div>
+    </div>
+</body>
+</html>

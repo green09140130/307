@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed_menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #000;
+            /* opacity: 0.5; */
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+        }
+        .navbar li {
+            /* height: 100%;  */
+        }
+        .navbar li a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            /* height: 100%; */
+            /* padding: 20px 10px; */
+            /* line-height: 30px; */
+        }
+        .navbar li a:hover {
+            background: #ddd;
+            color: #fff;
+            /* text-decoration: underline; */
+        }
+        .contents {
+            height: 1500px;
+            margin-top: 60px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="contents">
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+        <p>Some text Some text Some text...</p>
+    </div>
+</body>
+</html>

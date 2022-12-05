@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Icon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .tabcontent {
+            display: none;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+        #con1 {
+            background: red;
+        }
+        #con2 {
+            background: green;
+        }
+        #con3 {
+            background: blue;
+        }
+        #con4 {
+            background: orange;
+        }
+        .tablink {
+            display: block;
+            width: 25%;
+            padding: 10px 0;
+            background: #555;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+        }
+        .tablink:hover {
+            background: #777;
+        }
+        #london:checked ~ #con1 {
+            display: block;
+        }
+        #paris:checked ~ #con2 {
+            display: block;
+        }
+        #tokyo:checked ~ #con3 {
+            display: block;
+        }
+        #oslo:checked ~ #con4 {
+            display: block;
+        }
+        #london:checked ~ label:first-of-type{
+            background: red;
+        }
+        /* #london:checked ~ .tablink:first-of-type{
+            background: red;
+        } */
+        #paris:checked ~ label:nth-of-type(2){
+            background: green;
+        }
+        #tokyo:checked ~ label:nth-of-type(3){
+            background: blue;
+        }
+        #oslo:checked ~ label:last-of-type{
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="tab" id="london" checked>
+    <input type="radio" name="tab" id="paris">
+    <input type="radio" name="tab" id="tokyo">
+    <input type="radio" name="tab" id="oslo">
+    <div id="con1" class="tabcontent">
+        <h1>London</h1>
+        <p>London is the capital city of England</p>
+    </div>
+    <div id="con2" class="tabcontent">
+        <h1>Paris</h1>
+        <p>Paris is the capital city of France</p>
+    </div>
+    <div id="con3" class="tabcontent">
+        <h1>Tokyo</h1>
+        <p>Tokyo is the capital city of Japan</p>
+    </div>
+    <div id="con4" class="tabcontent">
+        <h1>Oslo</h1>
+        <p>Oslo is the capital city of Norway</p>
+    </div>
+    <label for="london" class="tablink">London</label>
+    <label for="paris" class="tablink">Paris</label>
+    <label for="tokyo" class="tablink">Tokyo</label>
+    <label for="oslo" class="tablink">Oslo</label>
+</body>
+</html>

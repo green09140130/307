@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        #div1 {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            margin: 100px;
+            padding: 10px;
+            border: 1px solid black;
+            perspective: 400px;
+            }
+            #div2 {
+            padding: 50px;
+            position: absolute;
+            border: 1px solid black;
+            background-color: red;
+            transform: rotateX(60deg);
+            transform-style: preserve-3d;
+            }
+            #div3 {
+            padding: 40px;
+            position: absolute;
+            border: 1px solid black;
+            background-color: yellow;
+            transform: rotateY(-60deg);
+            }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">HELLO
+            <div id="div3">YELLOW</div>
+        </div>
+    </div>
+</body>
+</html>

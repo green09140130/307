@@ -1,0 +1,65 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font: 16px Arial, "맑은 고딕", sans-serif;
+}
+header {
+    background: #633c6f;
+}
+.top_menu {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+}
+.top_menu ul {
+    display: flex;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5);
+    padding: 10px 0 10px 20px;
+}
+.top_menu ul li a {
+    color: #000;
+    font-size: 14px;
+}
+.top_menu ul li a::after {
+    content: "|";
+    padding: 0 10px;
+}
+.top_menu ul li:last-child a::after {
+    content: "";
+}
+.logo {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.gnb {
+    width: 1000px;
+    margin: 10px auto 0;
+    padding: 20px 0 100px;
+}
+.gnb ul {
+    display: flex;
+    justify-content: space-around;
+}
+.gnb ul li a {
+    color: #fff;
+}
+.visual {
+    position: relative;
+    top: -50px;
+    width: 1000px;
+    /* margin: -50px auto 0; */
+    margin: 0 auto
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instory style</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .out {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        .in {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+        .in:first-child {
+            background: #f00;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        .in:nth-child(2) {
+            background: #0f0;
+            left: 20px;
+            top: 20px;
+        }
+        .in:nth-child(3) {
+            background: #00f;
+            left: 40px;
+            top: 40px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="in"></div>
+        <div class="in"></div>
+        <div class="in"></div>
+    </div>
+</body>
+</html>

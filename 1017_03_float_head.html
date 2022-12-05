@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .head {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ccc;
+            height: 100px;
+            /* overflow: hidden; */
+        }
+        .logo {
+            width: 20%;
+            float: left;
+            background: rgba(255,0,0,0.5);
+        }
+        .logo_wrap {
+            /* padding: 50px;
+            margin: 50px; */
+            text-align: center;
+            line-height: 100px;
+        }
+        .gnb {
+            /* width: 80%; */
+            background: rgba(255,0,0,0.8);
+            float: right;
+        }
+        .gnb > ul {
+            /* padding: 50px; */
+            /* margin-left: 50px; */
+        }
+        .gnb > ul > li {
+            /* width: 20%; */
+            float: left;
+            /* padding: 50px; */
+        }
+        .gnb > ul > li a {
+            display: block;
+            /* width: 100%; */
+            padding: 0 50px;
+            background: #0f0;
+            text-align: center;
+            line-height: 100px;
+        }
+        .gnb > ul > li a:hover {
+            background: #00f;
+            color: #fff;
+        }
+        .gnb .sub li a {
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <div class="logo_wrap">로고</div>
+        </div>
+        <div class="gnb">
+            <ul>
+                <li><a href="#">메뉴1</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴1</a></li>
+                        <li><a href="#">서브메뉴2</a></li>
+                        <li><a href="#">서브메뉴3</a></li>
+                        <li><a href="#">서브메뉴4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성선택자</title>
+    <style>
+        h1[class] {
+            color: #f00;
+        }
+        img[alt] {
+            width: 200px;
+        }
+        /* p[class="abc"] {
+            color: #f00; 
+        } */
+        p[class*="abc"] {
+            color: #f00; 
+        }
+        a[href^="mailto"] {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>속성선택자</h1>
+    <h1 class="title">속성선택자</h1>
+    <img src="images/photo1.jpg" alt="photo1">
+    <img src="images/photo1.jpg" width="100">
+    <p class="abc">class명이 유일하게 abc인 p요소</p>
+    <p class="abc def">class명이 유일하게 abc이거나 여러개의 class명 중 하나가 abc인 p요소</p>
+    <p class="abc-def">class명이 abc로 시작하는 p요소</p>
+    <p class="defabc">class명이 abc로 끝나는 p요소</p>
+    <p class="defabcdef">class명이 abc가 포함되는 p요소</p>
+    <a href="mailto:aaa#naver">메일보내기</a><br>
+    <a href="#">메일보내기</a>
+</body>
+</html>

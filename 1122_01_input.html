@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .search {
+            position: relative;
+            animation: search 1s ease-in-out 1s;
+        }
+        .search a {
+            position: absolute;
+            left: 0;
+        }
+        .search input {
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            padding: 5px 50px;
+            border-radius: 5px;
+            border: none;
+            transition: 0.5s;
+            text-align: center;
+            color: #fff;
+        }
+        .search input::placeholder {
+            color: rgba(255,255,255,0.5);
+            text-align: center;
+        }
+        input:focus {
+            width: 80%;
+            outline: none;
+        }
+        input:focus ~ button {
+            opacity: 1;
+        }
+        button {
+            opacity: 0;
+        }
+        @keyframes search {
+            from {top: -100px; opacity: 0;}
+            to {top: 0; opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    
+        <div class="search">
+            <a href="">돋보기</a>
+            <input type="search" placeholder="search">
+            <button>취소</button>
+        </div>
+    
+</body>
+</html>

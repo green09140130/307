@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for</title>
+    <style></style>
+    <script>
+      let text = "";
+      let i = 0;
+      /*while(조건) {
+        실행문
+      }*/
+      while (i < 10) {
+        text += i + "<br>";
+        i++; //i = i +1 i += 1
+      }
+      document.write(text);
+      let text2 = "";
+      for (let i = 0; i < 10; i++) {
+        text2 += i + ",";
+      }
+      document.write(text2);
+
+      let text3 = "";
+      let j = 9;
+      do {
+        text3 += "<br>The number is " + j;
+        j--;
+        if (j == 0) break;
+      } while (j < 10);
+      document.write(text3);
+    </script>
+  </head>
+  <body></body>
+</html>

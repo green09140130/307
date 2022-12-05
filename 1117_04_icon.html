@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/> -->
+
+    <title>icon</title>
+    <style>
+        div {
+            margin: 10px;
+        }
+        .btn {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            background: #ccc;
+            border: none;
+            
+        }
+        .btn span {
+            vertical-align: middle;
+        }
+        .btn:hover {
+            background: #ddd;
+        }
+        .btn1 span {
+            position: relative;
+            transition: all 0.5s;
+        }
+        .btn1 span:last-child:after {
+            position: absolute;
+            top: 0px;
+            right: -20px;
+            content: "\00bb";
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .btn1:hover span:last-child::after {
+            opacity: 1;
+            right: 0;
+        }
+        .btn1:hover span:last-child {
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button class="btn">
+            <i class="fa fa-spinner fa-spin"></i> Loading
+        </button>
+        <button class="btn">
+            <i class="fa-solid fa-sync fa-spin"></i> Loading
+        </button>
+        <button class="btn">
+            <i class="fa-solid fa-circle-notch fa-spin"></i> Loading
+        </button>
+        <button class="btn">
+            <i class="fa-solid fa-spinner fa-spin-pulse"></i> Loading
+        </button>
+    </div>
+</body>
+</html>

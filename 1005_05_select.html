@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        p:first-child {
+            color: #f00;
+        }
+        p:nth-child(2) {
+            color: #0f0;
+        }
+        p:nth-child(3) {
+            color: #00f;
+        }
+        p:nth-child(4) {
+            color: #ff0;
+        }
+        p:last-child {
+            color: #0ff;
+        }
+        p::first-letter {
+            font-size: 30px;
+        }
+        p::first-line {
+            text-decoration: underline;
+        }
+        a:focus {
+            /* outline: none; */
+        }
+    </style>
+</head>
+<body>
+    <h1>heading태그입니다</h1>
+    <p>첫번째 줄입니다.</p>
+    <p>두번째 줄입니다.</p>
+    <p>세번째 줄입니다.</p>
+    <p>네번째 줄입니다.</p>
+    <p>다섯번째 줄입니다.</p>
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+</body>
+</html>

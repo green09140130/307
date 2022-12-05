@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <form action="">
+        수량 : <input type="number" min="1" max="50" value="1" step="5"><br>
+        단계(5단계) : 순한맛 <input type="range" min="1" max="5"> 매운맛
+        <select name="city" id="city">
+            <option value="서울">서울</option>
+            <option value="대전">대전</option>
+            <option value="대구">대구</option>
+            <option value="부산">부산</option>
+        </select><br>
+        남기고 싶은 말 <textarea name="tell" id="tell" cols="30" rows="10"></textarea><br>
+        <input list="city1" name="city1">
+        <datalist id="city1">
+            <option value="서울">서울</option>
+            <option value="대전">대전</option>
+            <option value="대구">대구</option>
+            <option value="부산">부산</option>
+        </datalist><br>
+        <input type="tel"><br>
+        <input type="time"><br>
+        <input type="week"><br>
+        <input type="email" required><br>
+        <input type="submit" value="전송"><br>
+        <input type="image" src="images/iphone.png" alt="iphone" width="40"><br>
+        <input type="file">
+    </form>
+</body>
+</html>

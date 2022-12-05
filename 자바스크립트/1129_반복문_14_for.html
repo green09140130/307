@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for</title>
+    <style></style>
+    <script>
+      let obj = { name: "홍길동", age: 20, gender: "남" };
+      // for (keys in obj) {
+      //   console.log(keys);
+      // }
+      let text = "";
+      for (let x in obj) {
+        text += obj[x] + "," + "<br>";
+      }
+      document.write(text);
+      let arr = [40, 50, 2, 4, 10];
+      let text2 = "";
+      for (let x in arr) {
+        text2 += arr[x] + "<br>";
+      }
+      document.write(text2);
+    </script>
+  </head>
+  <body></body>
+</html>

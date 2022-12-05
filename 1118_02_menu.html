@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Icon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li a {
+            position: relative;
+            display: block;
+            width: 100px;
+            padding: 15px;
+            margin: 10px 0;
+            left: -80px;
+            border-radius: 0 5px 5px 0;
+            transition: 0.5s;
+        }
+        ul li a:hover {
+            left: 0;
+        }
+        #about {
+            background: #aaa;
+        }
+        #blog {
+            background: #bbb;
+        }
+        #project {
+            background: #ccc;
+        }
+        #contact {
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" id="about">About</a></li>
+        <li><a href="#" id="blog">Blog</a></li>
+        <li><a href="#" id="project">Project</a></li>
+        <li><a href="#" id="contact">Contack</a></li>
+    </ul>
+</body>
+</html>

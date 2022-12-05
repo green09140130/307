@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid-container {
+            width: 1200px;
+            height: 500px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            justify-items: center;
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid #000;
+        }
+        .grid-item:nth-child(1) {
+            order: 2;
+        }
+        .grid-item:nth-child(2) {
+            align-self: flex-end;
+            justify-self: flex-start;
+            order: 1;
+        }
+        .grid-item:nth-child(3) {
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">111111</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+</body>
+</html>

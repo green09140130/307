@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 400px;
+            height: 400px;
+        }
+        #grad1 {
+            background: radial-gradient(at 30% 20%, yellow, red, black);
+        }
+        #grad2 {
+            background: radial-gradient(farthest-corner at 30% 20%, yellow, red, black);
+        }
+        #grad3 {
+            background: radial-gradient(farthest-side at 30% 20%, yellow, red, black);
+        }
+        #grad4 {
+            background: radial-gradient(closest-corner at 30% 20%, yellow, red, black);
+        }
+        #grad5 {
+            background: radial-gradient(closest-side at 30% 20%, yellow, red, black);
+        }
+        #grad6 {
+            background: radial-gradient(farthest-corner at 50% 50%, yellow, red, black);
+        }
+        #grad7 {
+            background: radial-gradient(farthest-side at 50% 50%, yellow, red, black);
+        }
+        #grad8 {
+            background: 
+            conic-gradient(from 90deg,yellow 0deg,yellow 90deg, red 90deg, black 180deg, blue 270deg);
+        }
+    </style>
+</head>
+<body>
+    <h2>at 30% 20%</h2>
+    <p id="grad1"></p>
+    <h2>farthest-corner at 30% 20%</h2>
+    <p id="grad2"></p>
+    <h2>farthest-side at 30% 20%</h2>
+    <p id="grad3"></p>
+    <h2>closest-corner at 30% 20%</h2>
+    <p id="grad4"></p>
+    <h2>closest-side at 30% 20%</h2>
+    <p id="grad5"></p>
+    <h2>closest-corner at 50% 50%</h2>
+    <p id="grad6"></p>
+    <h2>closest-side at 50% 50%</h2>
+    <p id="grad7"></p>
+    <p id="grad8"></p>
+</body>
+</html>

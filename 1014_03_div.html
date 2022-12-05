@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .wrap div {
+            border: 1px solid #000;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .contents {
+            overflow: hidden;
+            margin: 10px 0;
+            padding: 0 !important;
+            border: none !important;
+        }
+        .contents > div {
+            height: 500px;
+            box-sizing: border-box;
+        }
+        .contents .nav {
+            width: 18%;
+            float: left;
+        }
+        .contents .right {
+            width: 80%;
+            float: right;
+        }
+        .foot {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="head">header</div>
+        <div class="contents">
+            <div class="nav">nav</div>
+            <div class="right">section</div>
+        </div>
+        <div class="foot">footer</div>
+    </div>
+</body>
+</html>

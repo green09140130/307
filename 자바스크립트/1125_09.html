@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function myfnc() {
+            let a = document.getElementById("my").value;
+            document.getElementById("demo").innerHTML = a;
+            console.log(a);
+            alert("Copied the text : "+ a);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" value="Hello" id="my">
+    <button onclick="myfnc()">Copy text</button>
+    <p id="demo"></p>
+</body>
+</html>

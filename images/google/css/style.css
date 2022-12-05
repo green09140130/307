@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    font: 1em Arial, "맑은 고딕", 돋움, Doctum, sans-serif;
+}
+#wrapper {
+    /* padding: 0 20px; */
+    
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+header ul {
+    display: flex;
+}
+header ul li{
+    position: relative;
+    padding: 20px;
+}
+header ul.left li:first-child {
+    padding-left: 0;
+}
+header ul.right li:last-child {
+    padding-right: 0;
+}
+header ul li a {
+    color: #000;
+}
+header ul li a:hover {
+    text-decoration: underline;
+}
+header ul.right li:nth-child(3) a::before {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s 0s;
+}
+header ul.right li:nth-child(3) a::after {
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 60px;
+    content: "Google 앱";
+    width: 100px;
+    height: 30px;
+    background: #404040;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    opacity: 0;
+    transition: opacity 0.2s 0.5s;
+}
+header ul.right li:nth-child(3):hover a::before,
+header ul.right li:nth-child(3):hover a::after {
+    opacity: 1;
+}
+header ul.right li:last-child a {
+    background: #4386fa;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+section {
+    margin: 50px 0;
+}
+section h1 {
+    text-align: center;
+}
+section .search_box {
+    width: 600px;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #e4e4e4;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+section .search_box:hover {
+    box-shadow: 0 0 10px #eaeaea;
+}
+section .search_box input {
+    width: 450px;
+    margin-right: 15px;
+    padding-left: 10px;
+    border: none;
+}
+:focus {
+    outline: none;
+}
+section .search_box a {
+    position: relative;
+    display: inline-block;
+    text-indent: -9999px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+section .search_box a:hover::before {
+    position: absolute;
+    left: 5px;
+    top: 30px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid #000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+section .search_box a:hover::after {
+    position: absolute;
+    left: -20px;
+    top: 50px;
+    text-indent: 0;
+    background: #000;
+    font-size: 12px;
+    color: #fff;
+    white-space: nowrap;
+    padding: 0 10px;
+}
+section .search_box a.btn_key:hover::after {
+    content: "입력 도구";
+}
+section .search_box a.btn_mic:hover::after {
+    content: "음성 검색";
+}
+section .search_box a.btn_search:hover::after {
+    content: "이미지로 검색";
+}
+section .search_box a.btn_key {
+    background: url(../image/key_board.png) center no-repeat;
+}
+section .search_box a.btn_mic {
+    background: url(../image/mice.gif) center no-repeat;
+}
+section .search_box a.btn_search {
+    background: url(../image/img_search.JPG) center no-repeat;
+}
+section .btn_box {
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+section .btn_box input {
+    display: block;
+    background: #f2f2f2;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0 10px;
+    border-radius: 5px;
+    height: 30px;
+}
+section .btn_box input:first-child {
+    margin-right: 20px;
+}
+section .btn_box input:hover {
+    border-color: #ccc;
+    box-shadow: 0 0 5px #eaeaea;
+}
+section .ribbon {
+    text-align: center;
+}
+.tri {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid blue;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #f2f2f2;
+}
+footer .top {
+    border-bottom: 1px solid #e4e4e4;
+    margin: 10px 20px;
+}
+footer .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+footer .bottom > ul {
+    display: flex;
+}
+footer .bottom > ul li {
+    margin: 10px 20px;
+}
+footer .bottom > ul li a {
+    color: #000;
+}
+footer .bottom > ul li a:hover {
+    text-decoration: underline;
+}

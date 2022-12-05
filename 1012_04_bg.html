@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            height: 100px;
+        }
+       #grad1 {
+            background: linear-gradient(red,blue);
+       }
+       #grad2 {
+            background: linear-gradient(to left,red,blue);
+       }
+       #grad3 {
+            background: linear-gradient(-45deg,red,blue);
+       }
+       #grad4 {
+            background: linear-gradient(red 50%,blue 75%, green 90%);
+            /*50%지점까지는 완전한 red 75%지점까지는 red blue 90%지점까는 
+            blue green 마지막10%는 완전한 green*/
+       }
+       #grad5 {
+            background: linear-gradient(rgba(255,0,0,1),rgba(255,0,0,0));
+       }
+       #grad6 {
+            background: repeating-linear-gradient(red,blue 10%,green 20%);
+       }
+       #grad7 {
+            background: radial-gradient(red,blue);
+       }
+       #grad8 {
+            background: radial-gradient(circle, red,blue);
+       }
+       #grad9 {
+            background: radial-gradient(circle, red 10%,blue 50%);
+       }
+       #grad10 {
+            background: repeating-radial-gradient(circle, red,blue 10%,green 20%);
+       }
+    </style>
+</head>
+<body>
+    <p id="grad1"></p>
+    <p id="grad2"></p>
+    <p id="grad3"></p>
+    <p id="grad4"></p>
+    <p id="grad5"></p>
+    <p id="grad6"></p>
+    <p id="grad7"></p>
+    <p id="grad8"></p>
+    <p id="grad9"></p>
+    <p id="grad10"></p>
+</body>
+</html>

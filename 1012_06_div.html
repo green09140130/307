@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* text-align: center; */
+        }
+        div {
+            display: inline-block;
+            width: 100px;
+            border: 1px solid #000;
+        }
+        div.one {
+            display: block;
+            margin: 0 auto;
+        }
+        div.two {
+            display: block;
+            width: 50%;
+        }
+        div.first {
+            display: inherit;
+            width: 80%;
+            margin: 0 auto;
+            /* background: #ccc; */
+        }
+        .wrap {
+            width: 100%;;
+        }
+        .left {
+            text-align: left;
+        }
+        .right {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div>html문서의 분할 또는 섹션 정의</div>
+    <div>모든 종류의 콘텐츠를 div태그안 넣을수 있다</div>
+    <div class="one">가운데정렬</div>
+    <div class="two">
+        <p>가운데정렬</p>
+        <div class="first">first</div>
+    </div>
+    <div class="wrap">
+        <div class="left">left</div>
+        <div class="right">right</div>
+    </div>
+</body>
+</html>

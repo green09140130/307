@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food style</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+            font-size: 0;
+        }
+        .top {
+            height: 24px;
+        }
+        .directory {
+            height: 13px;
+        }
+        .directory .food01, .directory .menu {
+            float: left;
+        }
+        .directory .menu {
+            margin-left: 300px;
+        }
+        .directory .menu ul li {
+            float: left;
+        }
+        .directory .menu ul li a {
+            font-size: 8px;
+            padding: 0 20px;
+        }
+        .directory .menu ul li a:hover {
+            text-decoration: underline;
+        }
+        .directory .food02 {
+            float: right;
+        }
+        .contents {
+            clear: both;
+            display: flex;
+            justify-content: center;
+            height: 744px;
+        }
+        .navi {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .navi .number {
+            margin-left: 10px;
+            text-align: center;
+        }
+        .navi .number .number1 {
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            background: #fddee1;
+            border-radius: 50%;
+            font-size: 50px;
+            color: #e0a0a6;
+        }
+        .navi .number .number2 {
+            background: #fddee1;
+            width: 120px;
+            height: 20px;
+            color: #de0015;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .bottom {
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="top"><img src="images/food_img/top.gif" alt="top"></div>
+        <div class="directory">
+            <div class="food01"><img src="images/food_img/food_01.gif" alt="food_01"></div>
+            <div class="menu">
+               <ul>
+                 <li><a href="#">AUGUST/2003/</a></li>
+                 <li><a href="#">SUMMER</a></li>
+                 <li><a href="#">SPECIAL</a></li>
+                 <li><a href="#">E·MAGAXINE</a></li>
+               </ul>
+            </div>
+            <div class="food02"><img src="images/food_img/food_02.gif" alt="food02"></div>
+        </div>
+        <div class="contents">
+            <div class="note"><img src="images/food_img/note.gif"alt="note"></div>
+            <div class="food"><img src="images/food_img/image.gif" alt="image"></div>
+            <div class="navi">
+                <div class="number">
+                    <p class="number1">08</p>
+                    <p class="number2">FOOD&DIET</p>
+                </div>
+                <div class="nav"><img src="images/food_img/navigation.gif" alt="nav"></div>
+            </div>
+            <div class="page"><img src="images/food_img/page.gif" alt="page"></div>
+        </div>
+        <div class="bottom"><img src="images/food_img/bottom.gif" alt="bottom>"</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+    <script>
+        let id = "easy";
+        let pw = "1234";
+        let user_id = prompt("아이디를 입력해 주세요");
+        let user_pw = prompt("비밀번호를 입력해 주세요");
+        /*if(조건) {
+            참인실행문;
+        } else {
+            거짓인 실행문;
+        }*/
+        if(id == user_id) {
+            if(pw == user_pw) {
+                document.write(user_id+ "님 반갑습니다");
+            } else {
+                alert("비밀번호가 일치하지 않습니다");
+                location.reload();
+            }
+            
+        } else {
+            alert("아이디가 일치하지 않습니다");
+            location.reload();
+        }
+    </script>   
+    
+</head>
+<body>
+    
+</body>
+</html>

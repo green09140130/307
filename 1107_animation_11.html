@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script:400" rel="stylesheet"> -->
+    <title>animation</title>
+    <style>
+        @font-face {
+            font-family: nanumpenscript;
+            src: url(webfonts/NanumPenScript-Regular.woff) format("woff");
+        }
+        /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap'); */
+        a {
+            text-decoration: none;
+        }
+         body {
+            background: #333;
+         }
+         a.banner {
+            position: relative;
+            display: block;
+            width: 728px;
+            height: 176px;
+            border: 1px solid #555;
+            background: url(images/banner_arrow.png) no-repeat -100% 80%,
+                        url(images/banner_photo.png) no-repeat -300px 10px,
+                        url(images/banner_09.png) no-repeat 20px -400px,
+                        url(images/banner_bg.png) no-repeat 0 0;
+            text-align: center;
+            font-family: nanumpenscript, cursive;
+            animation: ani1 1s ease-in infinite;
+         }
+         @keyframes ani1 {
+            to {background-position: 50% 80%,-40px 10px,20px -30px,0 0;}
+         } 
+         a.banner img {
+            position: absolute;
+            top: 20px;
+            left: 300px;
+            animation: ani2 1s ease-in infinite;
+         }
+         @keyframes ani2 {
+            to {left: 550px;}
+         }
+         a.banner span {
+            position: absolute;
+            display: block;
+            opacity: 0;
+            left: 200px;
+            top: 20px;
+            font-size: 40px;
+            color: #fff;
+            animation: ani3 1s ease-in infinite;
+         }
+         @keyframes ani3 {
+           to {opacity: 1;}
+         }
+    </style>
+</head>
+<body>
+    <a href="#" class="banner">
+        <img src="images/banner_logo.png" alt="banner_logo">
+        <span>Animation Banner Design<br>웹 폰트를 활용한 스타일</span>
+    </a>
+</body>
+</html>

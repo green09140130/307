@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+    <script>
+      let str = "123456-1234567";
+      let star = "*";
+      document.write("123456-1" + star.repeat(6) + "<br>");
+      //let str0 = str.slice(0, 8);
+      let str0 = str.substring(0, 8);
+      document.write("slice : " + str.slice(0, 8) + "******" + "<br>");
+      document.write("substring : " + str.substring(0, 8) + "******" + "<br>");
+      document.write("substr : " + str.substr(0, 8) + "******" + "<br>");
+      document.write(str.slice(8) + "<br>");
+      let str1 = str.slice(8);
+      let str2 = str.slice(-6);
+      document.write(
+        "substring : " + str.replace(str.substring(8), "******") + "<br>"
+      );
+      document.write(str.replace(str2, "******") + "<br>");
+      document.write(
+        "substr : " + str.replace(str.substr(8, 6), "******") + "<br>"
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

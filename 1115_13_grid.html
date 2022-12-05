@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            margin: 50px auto;
+            display: grid;
+            background: #ddd;
+            grid-template-columns: 50px;
+            grid-auto-columns: 100px;
+            grid-auto-rows: 100px;
+            gap: 10px 30px;
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid #000;
+        }
+        .grid-item:first-child {
+            grid-column: 1 / span 3;
+        }
+        .grid-item:nth-child(2) {
+            grid-column: 5;
+        }
+        .grid-item:nth-child(3) {
+            grid-column: auto / span 2;
+        }
+        .grid-item:nth-child(4) {
+            grid-area: 3 / 4 / 5 / 6;
+            /* grid-area: 3(row-start) / 4(column-start) / 5(row-end) / 6(column-end); */
+            /*grid-row-start: 3*/
+            /*grid-row-end: 4*/
+            /*grid-column-start: 5*/
+            /*grid-column-end: 6*/
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+    </div>
+</body>
+</html>

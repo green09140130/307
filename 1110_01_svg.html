@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg</title>
+    <style>
+        svg {
+            background: #ccc;
+        }
+        #svg1,#svg2,#svg3 {
+            position: absolute;
+            background: none;
+        }
+        #svg1 {
+            stroke-dasharray: 10px 20px;
+        }
+        #svg2 {
+            stroke-dasharray: 10px 20px;
+        }
+        #svg3 {
+            stroke-dasharray: 10px 20px;
+        }
+        #svg4 {
+            padding: 20px;
+            /* animation: ani 5s forwards; */
+        }
+        #svg4:hover {
+            animation: ani 5s forwards;
+        }
+        @keyframes ani {
+            0% {stroke-dashoffset:1600;}
+            100% {stroke-dashoffset: 0;}
+        }
+    </style>
+</head>
+<body>
+    <svg width="400" height="110">
+       <rect x="5" y="5" width="300" height="100" style="fill: none;stroke-width:10;stroke:rgb(0,0,0)" /> 
+    </svg>
+    <svg width="400" height="110">
+        <rect x="5" y="5" width="300" height="100" style="fill: none;stroke-width:10;stroke:rgb(0,0,0)" /> 
+     </svg>
+     <svg width="400" height="110">
+        <rect x="5" y="5" width="300" height="100" fill="none" stroke-width="10" stroke="rgb(0,0,0)" /> 
+     </svg>
+     <svg width="400" height="110">
+        <circle cx="0" cy="0" r="40" fill="none" stroke-width="10" stroke="rgb(0,0,0)" />
+        <circle cx="0" cy="110" r="40" fill="none" stroke-width="10" stroke="rgb(0,0,0)" />
+        <circle cx="400" cy="110" r="40" fill="none" stroke-width="10" stroke="rgb(0,0,0)" />
+        <circle cx="400" cy="0" r="40" fill="none" stroke-width="10" stroke="rgb(0,0,0)" />
+     </svg>
+     <svg width="400" height="110">
+        <ellipse cx="100" cy="30" rx="40" ry="20" fill="none" stroke-width="10" stroke="rgb(0,0,0)"/>
+     </svg>
+     <svg width="500" height="500" id="svg1">
+        <line x1="10" y1="10" x2="100" y2="100" stroke-width="10" stroke="rgba(255,0,0,0.5)" stroke-linecap="butt"/>
+     </svg>
+     <svg width="500" height="500" id="svg2">
+        <line x1="10" y1="10" x2="100" y2="100" stroke-width="10" stroke="rgba(0,255,0,0.5)" stroke-linecap="round"/>
+    </svg>
+    <svg width="500" height="500" id="svg3">
+        <line x1="10" y1="10" x2="100" y2="100" stroke-width="10" stroke="rgba(0,0,255,0.5)" stroke-linecap="square"/>
+    </svg>
+    <svg width="500" height="500">
+        <polyline points="20,20 40,25 60,40 100,80 200,200" fill="none" stroke-width="1" stroke="rgba(0,0,255)" />
+    </svg>
+    <svg width="500" height="500" id="svg4">
+        <polyline points="40,10 370,10 400,40 400,370 370,400 40,400 10,370 10,40 40,10" fill="none" stroke-width="5" stroke="rgba(0,0,255)" stroke-dasharray="1600"/>
+    </svg>
+    <svg height="210" width="500">
+        <polygon points="200,10 250,190 160,210" style="fill:lime;stroke:purple;stroke-width:1" />
+    </svg>
+    <svg height="250" width="500">
+        <polygon points="220,10 300,210 170,250 123,234" 
+       style="fill:lime;stroke:purple;stroke-width:1" />
+    </svg>
+    <svg height="210" width="400">
+        <path d="M150 0 L75 200 L225 200 Z" fill="none" stroke="black" stroke-width="5"/>
+        <path d="M150 0 L75 200 L225 200 Z" fill="none" stroke="red"/>
+   </svg>
+   <svg height="30" width="200">
+    <text x="0" y="15" fill="red">I love SVG!</text>
+   </svg>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            background: #ddd;
+            grid-template-areas: "a a a"
+                                 ". . ."
+                                 "b c d";
+            grid-auto-rows: 100px;
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid #000;
+        }
+        .grid-item:first-child {
+            grid-area: a;
+        }
+        .grid-item:nth-child(2) {
+            grid-area: b;
+        }
+        .grid-item:nth-child(3) {
+            grid-area: c;
+        }
+        .grid-item:last-child {
+            grid-area: d;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+    </div>
+</body>
+</html>

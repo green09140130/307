@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+   <div id="div"></div> 
+   <!-- <button id="start">start</button> -->
+   <button id="stop">stop</button>
+   <script>
+    function showtime() {
+        let a = new Date();
+        let time = a.toLocaleTimeString();
+        document.getElementById("div").innerText = time;
+    }
+    let interval = setInterval(showtime,1000);
+    showtime();
+    // document.getElementById("stop").onclick = function(){
+    //     clearInterval(interval);
+    // }
+    // document.getElementById("start").onclick = function(){
+    //     interval = setInterval(showtime,1000);
+    // }
+    document.getElementById("stop").onmouseover = function(){
+        clearInterval(interval);
+    }document.getElementById("stop").onmouseout = function(){
+        interval = setInterval(showtime,1000);
+    }
+   </script>
+</body>
+</html>

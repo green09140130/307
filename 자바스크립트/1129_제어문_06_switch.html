@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>제어문</title>
+    <script>
+      let week = new Date();
+      let weekday = week.getDay(); /*0~6*/
+      console.log(weekday);
+      // switch(weekday) {
+      //     case 0:
+      //         document.write("일요일");
+      //         break;
+      //     case 1:
+      //         document.write("월요일");
+      //         break;
+      //     case 2:
+      //         document.write("화요일");
+      //         break;
+      //     case 3:
+      //         document.write("수요일");
+      //         break;
+      //     case 4:
+      //         document.write("목요일");
+      //         break;
+      //     case 5:
+      //         document.write("금요일");
+      //         break;
+      //     default:
+      //         document.write("토요일");
+      // }
+      // if(조건) {
+      //     참인실행문
+      // } else {
+      //     거짓인 실행문
+      // }
+      if (weekday == 0) {
+        document.write("일요일");
+      } else if (weekday == 1) {
+        document.write("월요일");
+      } else if (weekday == 2) {
+        document.write("화요일");
+      } else if (weekday == 3) {
+        document.write("수요일");
+      } else if (weekday == 4) {
+        document.write("목요일");
+      } else if (weekday == 5) {
+        document.write("금요일");
+      } else {
+        document.write("토요일");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

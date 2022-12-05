@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>white-space</title>
+    <style>
+        .ex {
+            background: lightblue;
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+        }
+        .ex1 {
+            white-space: pre-wrap;
+        }
+        .ex2 {
+            /* word-break: break-all; */
+        }
+        .ex3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .ex4 {
+            width: 100%;
+            /* max-width: 1280px; */
+        }
+        .ex4 img{
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ex ex1">L       orem ipsum dolor sit amet, consectetuer adipiscing elit.</div>
+<pre>
+L       orem 
+ipsum dolor sit amet, 
+consectetuer adipiscing elit.
+</pre>
+<div class="ex ex2">L       orem ipsum dolor sit amet, consectetuer adipiscing elit. 무궁화 꽃이 피었습니다.무궁화 꽃이 피었습니다.</div>
+<div class="ex ex3">L       orem ipsum dolor sit amet, consectetuer adipiscing elit. 무궁화 꽃이 피었습니다.무궁화 꽃이 피었습니다.</div>
+<div class="ex4"><img src="images/photo1.jpg" alt="photo1"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const fruits = ["사과", "바나나", "딸기", "망고"];
+        document.write(fruits+"<br>");
+        document.write(fruits.toString()+"<br>");
+        document.write(fruits.join("-")+"<br>");
+        fruits.pop();
+        document.write(fruits+"<br>");
+        fruits.push("키위");
+        document.write(fruits+"<br>");
+        fruits.shift();
+        document.write(fruits+"<br>");
+        fruits.unshift("수박");
+        document.write(fruits+"<br>");
+        const arr1 = ["하나", "둘", "셋"];
+        const arr2 = ["one", "two", "three"];
+        document.write(arr1.concat(arr2)+"<br>");
+        const arr3 = ["하나", "둘", "셋"];
+        const arr4 = ["one", "two", "three"];
+        const arr5 = ["Html", "Css", "Css3"];
+        document.write(arr3.concat(arr4,arr5)+"<br>");
+        //arr5.splice(1, 1, "레몬", "오렌지");
+        document.write(arr5+"<br>");
+        
+        document.write(fruits.slice(1,3)+"<br>");
+        document.write(fruits.sort()+"<br>");
+        //document.write(arr5.sort()+"<br>");
+        document.write(arr5.reverse()+"<br>");
+        const grade = ["3학년","5학년","2학년","1학년","6학년","4학년"];
+        //document.write(grade.sort()+"<br>");
+        document.write(grade.sort().reverse()+"<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할당 연산자</title>
+    
+    
+</head>
+<body>
+    <button onclick="show()">태그 보이기</button>
+    <button onclick="hide()">태그 숨기기</button>
+    <p id="content" class="con"></p>
+    <p>버튼</p>
+
+    <script>
+        let str = "<ul>";
+        str += '<li><a href="#">링크1</a></li>';
+        str += '<li><a href="#">링크2</a></li>';
+        str += '<li><a href="#">링크3</a></li>';
+        str += '<li><a href="#">링크4</a></li>';
+        str += '<ul>';
+        let text = document.getElementsByTagName("p")[1];
+        console.log("text :"+text);
+        
+        function show() {
+          
+           //document.getElementById("content").innerHTML = str; 
+          // document.getElementsByTagName("p")[0].innerHTML = str;
+          document.getElementsByClassName("con")[0].innerHTML = str; 
+          text.style.display = "block";
+        }
+        function hide() {
+           document.getElementById("content").innerHTML = ""; 
+           text.style.display = "none";
+        }
+        </script>
+</body>
+</html>

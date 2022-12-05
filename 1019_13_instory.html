@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instory style</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            background: #d3222a;
+        }
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .top {
+            text-align: right;
+            height: 23px;
+        }
+        .top ul {
+            float: right;
+        }
+        .top ul li {
+            float: left;
+        }
+        .top ul li a {
+            color: #fff;
+            font-size: 14px;
+        }
+        .top ul li a::after {
+            content: "|";
+            padding: 0 10px;
+        }
+        .top ul li:last-child a::after {
+            content: "";
+        }
+        .top ul li a:hover {
+            color: #fc0;
+        }
+        .top ul li a:hover::after {
+            color: #fff;
+        }
+        .head {
+            height: 82px;
+            background: url(images/pattern.gif);
+        }
+        section {
+            display: flex;
+            height: 625px;
+        }
+        section .left {
+            position: relative; 
+        }
+        section .left ul {
+            position: absolute;
+            top: 220px;
+            left: 40px;
+        }
+        section .left ul li a {
+            color: #fff;
+        }
+        section .left ul li a:hover {
+            color: #fc0;
+            margin-left: 10px;
+        }
+        section .right {
+            width: 514px;
+            /* height: 625px; */
+            background: url(images/index_main_02.gif);
+        }
+        /* section > div {
+            float: left;
+        } */
+        footer {
+            /* clear: left; */
+            background: #fff;
+            text-align: center;
+            height: 100px;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="top">
+                <ul>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">JAPANESE</a></li>
+                    <li><a href="#">CHINESE</a></li>
+                    <li><a href="#">ITALIAN</a></li>
+                </ul>
+            </div>
+            <div class="head">
+                <img src="images/index_pattern.gif" alt="index_pattern">
+            </div>
+        </header>
+        <section>
+            <div class="left">
+                <img src="images/index_main_01.jpg" alt="index_main">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Instory</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Illustrator</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right"><h1>Home 메인페이지입니다</h1></div>
+        </section>
+        <footer>
+            <div class="foot"><img src="images/copyright.gif" alt="copyright"></div>
+        </footer>
+    </div>
+</body>
+</html>

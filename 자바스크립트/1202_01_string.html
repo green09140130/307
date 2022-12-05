@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+    <script>
+      let x = "Hello";
+      let a = "world";
+      let y = new String("Hello");
+      let arr = ["하나", 100, 200, 300];
+      let arr1 = new Array("하나", 100, 200, 300);
+      console.log(x.length);
+      document.write(x.length + "<br>");
+      document.write(arr.length + "<br>");
+      document.write(x.slice(2, 4) + "<br>");
+      document.write(arr.slice(2, 3) + "<br>");
+      document.write(arr.slice(-3, -2) + "<br>");
+      document.write(x.substring(2, 4) + "<br>");
+      //document.write(arr.substring(2, 4) + "<br>");
+      //substring()메소드는 문자객체의 시작에서 끝인덱스전까지의 문자열을반환
+      document.write(x.substr(2, 3) + "<br>");
+      document.write(x.substr(-3, 2) + "<br>");
+      //document.write(arr.substr(2, 3) + "<br>");
+      //substr()메소드는 문자객체의 시작에서 몇개의 문자열을 반환
+      document.write(x.replace("He", "he") + "<br>");
+      document.write(x.concat(" ", a) + "<br>");
+      document.write(x.concat(" good") + "<br>");
+      let b = "Microsoft and microsoft and microsoft";
+      document.write(b.replace(/microsoft/i, "w3school") + "<br>");
+      document.write(b.replace(/microsoft/g, "w3school") + "<br>");
+      document.write(b.replace(/Microsoft/g, "w3school") + "<br>");
+      document.write(b.replaceAll("microsoft", "w3school") + "<br>");
+      let c = b.replaceAll("microsoft", "w3school");
+      document.write(c + "<br>");
+      let d = c.replaceAll("Microsoft", "w3school");
+      document.write(d + "<br>");
+      document.write(b.toUpperCase() + "<br>");
+      document.write(b.toLowerCase() + "<br>");
+      let text = "             hello          ";
+      document.write(text.length + "<br>");
+      let text2 = text.trim();
+      let text3 = text.trimEnd();
+      document.write(text3.length + "<br>");
+      document.write(x.charAt(2) + "<br>");
+      document.write(x.charCodeAt(3) + "<br>");
+      document.write(x[2] + "<br>");
+      let txt = "nice,to,meet,you";
+      let txt2 = txt.split(",");
+      for (let i = 0; i <= 3; i++) {
+        document.write(txt2[i] + "<br>");
+      }
+      let txt3 = "hello";
+      let txt4 = txt3.split("");
+      for (let i = 0; i <= 4; i++) {
+        document.write(txt4[i] + "<br>");
+      }
+      document.write(txt3.search("H") + "<br>");
+      document.write(txt3.match("h") + "<br>");
+    </script>
+  </head>
+  <body></body>
+</html>

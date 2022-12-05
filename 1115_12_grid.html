@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            margin: 50px auto;
+            display: grid;
+            background: #ddd;
+            /*1. grid-template-rows / grid-template-columns */
+            /* grid: 100px 150px / auto auto auto;  */
+
+            /* 2. grid-template-areas */
+            /* grid: "a a . ."
+                  "a a . ."; */
+
+            /* 3. grid-template-rows / grid-auto-columns */
+            /* grid: 100px 150px/ 50px 100px 150px; */
+            /* grid: 100px 150px/ auto auto; */
+
+            /* 4. grid-auto-rows / grid-template-columns */
+            /* grid: 100px 50px / auto auto; */
+
+            /* 5. grid-template-rows / grid-auto-flow grid-auto-columns */
+            /* grid: 100px 200px 300px / auto-flow 100px; */
+
+            /* 6. grid-auto-flow grid-auto-rows / grid-template-columns */
+            /* grid: auto-flow 100px / 100px 200px 300px; */
+
+            grid: auto-flow dense 100px 200px / 100px 200px;
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid #000;
+        }
+        .grid-item:first-child {
+            grid-column: 2;
+        }
+        .grid-item:nth-child(3) {
+            grid-row: 3;
+        }
+        /* .grid-item:first-child {
+            grid-area: a;
+        } */
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .popup {
+            text-align: center;
+        }
+        .contents p {
+            display: none;
+            position: relative;
+            /* display: inline-block; */
+            width: 150px;
+            background: #666;
+            padding: 10px;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: move 0.5s;
+        }
+        .contents p::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #666 transparent transparent transparent;
+        }
+        @keyframes move {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        .contents p.show {
+            display: block;
+        }
+    </style>
+    <script>
+        function myfnc() {
+            let a = document.getElementById("simple");
+            a.classList.toggle("show");
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="popup">
+        <div class="top">Popup</div>
+        <div class="contents">
+            <label onclick="myfnc()">Click me to toggle the popup!</label>
+            <p id="simple">A simple popup!</p>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+    <script>
+      let arr = [
+        "하나",
+        "둘",
+        "셋",
+        "넷",
+        "다섯",
+        "여섯",
+        "일곱",
+        "여덟",
+        "아홉",
+        "열",
+      ];
+      let text = "";
+      text += arr[0] + "<br>";
+      text += arr[1] + "<br>";
+      text += arr[2] + "<br>";
+      text += arr[4] + "<br>";
+      text += arr[5] + "<br>";
+      text += arr[6] + "<br>";
+      document.write(text + "<br>");
+      let text2 = "";
+      /*for(초기값;조건;증감값)*/
+      let n = arr.length;
+      for (let i = 0; i < n; i++) {
+        //i = i + 1 i출력후 +연산을 한다
+        text2 += arr[i] + "<br>";
+      }
+      document.write(text2);
+    </script>
+  </head>
+  <body></body>
+</html>

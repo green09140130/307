@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a링크</title>
+    <style>
+        /*href에 연결되어있는 요소가 taget요소입니다*/
+        #wrap div {
+            display: none;
+        }
+        #wrap div:target {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <a href="#link1">Link1</a>
+        <a href="#link2">Link2</a>
+        <a href="#link3">Link3</a>
+        <div id="link1">
+            <h3>content to Link1</h3>
+            <p>안녕하세요</p>
+        </div>
+        <div id="link2">
+            <h3>content to Link2</h3>
+            <p>안녕하세요</p>
+        </div>
+        <div id="link3">
+            <h3>content to Link3</h3>
+            <p>안녕하세요</p>
+        </div>
+    </div>
+</body>
+</html>

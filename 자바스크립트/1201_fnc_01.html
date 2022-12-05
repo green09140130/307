@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko"
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .tabcontent {
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+        .tablink {
+           float: left; 
+           width: 25%;
+           background: #555;
+           text-align: center;
+           padding: 10px 0;
+           cursor: pointer;
+        }
+        .tablink:hover {
+            background: #777;
+        }
+    </style>
+</head>
+<body>
+   <div class="tabcontent">
+    <h1>content1</h1>
+   </div>
+   <div class="tabcontent">
+    <h1>content2</h1>
+   </div>
+   <div class="tabcontent">
+    <h1>content3</h1>
+   </div>
+   <div class="tabcontent">
+    <h1>content4</h1>
+   </div>
+   <p class="tablink" onclick="tab(0)">content1</p>
+   <p class="tablink" onclick="tab(1)">content2</p>
+   <p class="tablink" onclick="tab(2)">content3</p>
+   <p class="tablink" onclick="tab(3)">content4</p>
+   <script>
+    let chcolor = ["red","green","blue","orange"];
+    let content = document.getElementsByClassName("tabcontent");
+    let btn = document.getElementsByClassName("tablink");
+    
+    function tab(j) {
+        // for(let i=0;i<=3;i++) {
+        // content[i].style.backgroundColor = chcolor[i];
+        // btn[i].style.backgroundColor = chcolor[i];
+        // content[i].style.display = "none";
+        // content[j].style.display = "block";
+    // 
+    // while(조건) {
+    //     실행문
+    // }
+    let i = 0;
+    // while(i <=3) {
+    //     content[i].style.backgroundColor = chcolor[i];
+    //     btn[i].style.backgroundColor = chcolor[i];
+    //     content[i].style.display = "none";
+    //     content[j].style.display = "block";
+    //     i++;
+    // }
+    
+    
+    // do{
+    //     실행문
+    // }while();
+    do {
+        content[i].style.backgroundColor = chcolor[i];
+        btn[i].style.backgroundColor = chcolor[i];
+        content[i].style.display = "none";
+        content[j].style.display = "block";
+        i++;
+    }while(i<=3)
+    }
+    tab(0);
+   </script>
+</body>
+</html>

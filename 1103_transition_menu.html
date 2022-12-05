@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .menu {
+            width: 500px;
+            padding: 10px;
+            font: 12px/2 Arial, "맑은 고딕", 돋움, Doctum, sans-serif;
+        }
+        .menu h2 {
+            width: 100%;
+            margin: 5px 0;
+        }
+        .menu h2 a {
+            display: block;
+            /* background: linear-gradient(#cecece,#8f8f8f); */
+            /* background-image: url(images/photo1.jpg); */
+            /* background: #2288dd; */
+            background-image: linear-gradient(#cecece,#8f8f8f);
+            color: #424242;
+            padding: 10px;
+            border-radius: 5px;
+            transition: color 2s;
+        }
+        .menu p {
+            padding: 0 10px;
+            /* display: none; */
+            /* opacity: 0; */
+            height: 0;
+            overflow: hidden;
+        }
+        .menu h2 a:hover, .menu :target h2 a {
+            /* background: linear-gradient(#6bb2ff,#2288dd); */
+            /* background: #ccc; */
+            /* background-image: url(images/photo2.jpg); */
+            background-image: linear-gradient(#6bb2ff,#2288dd);;
+            color: #fff;
+        }
+        .menu :target p {
+            /* display: block; */
+            /* opacity: 1; */
+            border: 1px solid #ccc;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h1>Accordion Menu</h1>
+        <div id="html5" class="content">
+            <h2><a href="#html5">HTML5</a></h2>
+            <p>HTML5는 HTML4을 더욱 발전시킨 마크업 언어입니다. 하지만 HTML4에서 단순히 이미지나 텍스트를 표시하던 수준에서 벗어나 화면 상에서 그림을 그리는 등 더 많은 기능을 추가한 마크업 언어입니다. 또한 HTML5는 단순히 마크업 언어로서의 기능 뿐만 아니라 자바스크립트를 사용해 프로그램을 만들 수 있는 API까지 포함하고 있습니다.</p>
+        </div>
+        <div id="css3" class="content">
+            <h2><a href="#css3">CSS3</a></h2>
+            <p>CSS는 웹 디자인이나 웹 개발에 있어서 핵심적인 요소입니다. 특히 현재 개발 중인 CSS3는 기존의 CSS에서는 할 수 없던 여러 가지 효과를 쉽게 만들 수 있고 CSS3만으로도 간단한 애니메이션을 만들 수도 있고 멋진 내비게이션을 만들 수 있기 때문에 더욱 주목을 받고 있습니다.</p>
+        </div>
+        <div id="api" class="content">
+            <h2><a href="#api">API</a></h2>
+            <p>HTML5에는 웹 애플리케이션 제작을 위한 API들이 다양하게 제시되고 있습니다. API를 이해하기 위해서는 자바스크립트 문법 뿐만 아니라 DOM(Document Object Model)에 대한 기본 지식이 필요합니다.</p>
+        </div>
+    </div>
+</body>
+</html>

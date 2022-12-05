@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String</title>
+    <script>
+      let i = 1;
+      function prev() {
+        i--;
+        if (i < 1) i = 6;
+        document.getElementsByTagName("img")[0].src =
+          "images/photo" + i + ".jpg";
+      }
+      function next() {
+        i++;
+        if (i > 6) i = 1;
+        let imgscr = document.getElementsByTagName("img")[0];
+        let im = imgscr.getAttribute("src");
+        //getAttribute() 메서드는 요소의 속성 값을 반환합니다.
+        //imgscr.setAttribute("src", im.replace(im.slice(-5, -4), i));
+        // imgscr.setAttribute("src", im.replace(im.substr(-5, 1), i));
+        imgscr.setAtribute("src", im.replace(im.substring(12, 13), i));
+        //setAttribute() 메서드는 속성에 새 값을 설정합니다.
+      }
+    </script>
+  </head>
+  <body>
+    <div class="btn">
+      <span onclick="prev()">이전</span>
+      <span onclick="next()">다음</span>
+    </div>
+    <img src="images/photo1.jpg" alt="photo1" />
+  </body>
+</html>

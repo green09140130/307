@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            width: 80%;
+            margin: 0 auto;
+            background: #ddd;
+            padding: 10px;
+            gap: 10px 30px;/*행간격 열간격*/
+            grid-template-columns: 100px 100px 300px;
+            grid-template-areas: "a b c"
+                                 "a d e";
+            grid-auto-rows: 100px;
+        }
+        .grid-item {
+            background: #ccc;
+            border: 1px solid rgba(0,0,0,1);
+        }
+        .item1 {
+            grid-area: a;
+        }
+        .item2 {
+            grid-area: b;
+        }
+        .item3 {
+            grid-area: c;
+        }
+        .item3 {
+            grid-area: e;
+        }
+        .item5 {
+            grid-area: d;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+    </div>
+</body>
+</html>

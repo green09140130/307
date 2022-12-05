@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for</title>
+    <style></style>
+    <script>
+      function a() {
+        document.write("안녕하세요1<br>");
+      }
+      a();
+      (function () {
+        document.write("안녕하세요2<br>");
+      })();
+      function b() {
+        for (let i = 1; i <= 5; i++) {
+          document.write("감사합니다<br>");
+        }
+      }
+      b();
+      function c(name, area) {
+        document.write(name + "님은 " + area + "에 살고 있습니다" + "<br>");
+      }
+      c("홍길동", "대전");
+      function d(num) {
+        document.write(num * num + "<br>");
+      }
+      d(5);
+      function e(x, y) {
+        return x * y;
+      }
+      document.write(e(3, 4));
+    </script>
+  </head>
+  <body>
+    <button onclick="a()">클릭</button>
+  </body>
+</html>

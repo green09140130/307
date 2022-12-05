@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 400px;
+            height: 400px;
+            background: #ccc;
+        }
+        .child1 {
+            width: auto;
+            margin: 0 50px;
+            padding: 0 50px;
+            border: 10px solid #999;
+            border-width: 0 10px;
+            background: #fee;
+        }
+        .child2 {
+            width: 100%;
+            margin: 0 50px;
+            padding: 0 50px;
+            border: 10px solid #999;
+            border-width: 0 10px;
+            background: #fee;
+        }
+        .contents {
+            width: 100%;
+            max-width: 1200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="child1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="child2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    </div>
+    <div class="contents">본문내용입니다.</div>
+    <div class="top">
+        <div class="banner"></div>
+    </div>
+</body>
+</html>
