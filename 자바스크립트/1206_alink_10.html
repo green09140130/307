@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>a링크태그 막기</title>
+    <style></style>
+  </head>
+  <body>
+    <!-- <a href="http://www.naver.com" onclick="url_link(event)">구글</a>
+    <script>
+      function url_link(a) {
+        a.preventDefault();
+        location.href = "http://www.google.com";
+      }
+    </script> -->
+    <a href="http://www.naver.com" id="google">구글</a>
+    <!-- <script>
+      let txt = document.getElementById("google");
+      function myfnc(e) {
+        e.preventDefault();
+        location.href = "http://www.google.com";
+      }
+      txt.onclick = function (a) {
+        myfnc(a);
+      }
+    </script> -->
+    <!-- <script>
+      let txt = document.getElementById("google");
+      txt.onclick = function (e) {
+        e.preventDefault();
+        location.href = "http://www.google.com";
+      }
+    </script> -->
+    <script>
+      let txt = document.getElementById("google");
+      txt.onclick = function () {
+        location.href = "http://www.google.com";
+        return false; //구문의 제일 끝에 기입해야합니다
+      };
+    </script>
+  </body>
+</html>
