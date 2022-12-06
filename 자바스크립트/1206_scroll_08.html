@@ -21,6 +21,11 @@
         animation-duration: 1s;
         animation-fill-mode: forwards;
       }
+      .slidedown {
+        animation-name: slidedown;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
       @keyframes slideup {
         0% {
           opacity: 0;
@@ -29,6 +34,16 @@
         100% {
           opacity: 1;
           transform: translateY(0);
+        }
+      }
+      @keyframes slidedown {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(70%);
         }
       }
     </style>
@@ -47,7 +62,7 @@
         if (ht > 350) {
           document.getElementById("myImg").className = "slideup";
         } else {
-          document.getElementById("myImg").className = "";
+          document.getElementById("myImg").className = "slidedown";
         }
       };
     </script>
