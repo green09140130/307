@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onscroll Event</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 3000px;
+      }
+      #nav {
+        width: 100%;
+        height: 50px;
+        background: #333;
+      }
+      #content {
+      }
+      #btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #f00;
+        cursor: pointer;
+        padding: 15px;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        opacity: 0;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+    <div id="content">본문내용입니다.</div>
+    <button id="btn" onclick="topfnc()">Top</button>
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        if (ht > 50) {
+          document.getElementById("btn").style.opacity = "1";
+        } else {
+          document.getElementById("btn").style.opacity = "0";
+        }
+      };
+      function topfnc() {
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

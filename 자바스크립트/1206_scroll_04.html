@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onscroll Event</title>
+    <style>
+      #div1 {
+        width: 250px;
+        height: 250px;
+        overflow: auto;
+      }
+      #content {
+        width: 2000px;
+        height: 2000px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1" onscroll="myfnc()">
+      <div id="content">Scroll me!</div>
+    </div>
+    <p id="demo"></p>
+    <button onclick="fnc()">스크롤 원위치</button>
+    <script>
+      function myfnc() {
+        let txt = document.getElementById("div1");
+        let x = txt.scrollLeft;
+        let y = txt.scrollTop;
+        document.getElementById("demo").innerHTML =
+          "가로 :" + x + "<br>세로 : " + y;
+      }
+      function fnc() {
+        let txt = document.getElementById("div1");
+        txt.scrollLeft = 0;
+        txt.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>

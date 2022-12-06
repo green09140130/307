@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onscroll Event</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 3000px;
+      }
+      #nav {
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        background: #333;
+        top: -60px;
+        transition: 0.5s;
+      }
+      #content {
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav"></div>
+    <div id="content">본문내용입니다.</div>
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        if (ht > 50) {
+          document.getElementById("nav").style.top = "0";
+          document.getElementById("content").style.top = "50px";
+        } else {
+          document.getElementById("nav").style.top = "-60px";
+          document.getElementById("content").style.top = "0";
+        }
+      };
+    </script>
+  </body>
+</html>
