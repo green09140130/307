@@ -18,8 +18,10 @@
         height: 50px;
         background: #333;
       }
+
       #content {
       }
+
       #btn {
         position: fixed;
         right: 20px;
@@ -42,12 +44,14 @@
     <script>
       window.onscroll = function () {
         let ht = document.documentElement.scrollTop;
+
         if (ht > 50) {
           document.getElementById("btn").style.opacity = "1";
         } else {
           document.getElementById("btn").style.opacity = "0";
         }
       };
+
       function topfnc() {
         document.documentElement.scrollTop = 0;
       }

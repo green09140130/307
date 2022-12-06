@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onscroll Event</title>
+    <style>
+      .top {
+        height: 500px;
+      }
+      .content {
+        height: 1500px;
+      }
+      .content img {
+        width: 300px;
+        opacity: 0;
+      }
+      .slideup {
+        animation-name: slideup;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes slideup {
+        0% {
+          opacity: 0;
+          transform: translateY(70%);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <h1>The onscroll Event</h1>
+    </div>
+    <hr />
+    <div class="content">
+      <img src="images/photo1.jpg" id="myImg" alt="photo1" />
+    </div>
+    <script>
+      window.onscroll = function () {
+        let ht = document.documentElement.scrollTop;
+        if (ht > 350) {
+          document.getElementById("myImg").className = "slideup";
+        } else {
+          document.getElementById("myImg").className = "";
+        }
+      };
+    </script>
+  </body>
+</html>
