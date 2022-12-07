@@ -115,7 +115,7 @@
         //let cloneSlide_last=slideImge[5].cloneNode(true);
         let cloneSlide_last = slides.lastElementChild.cloneNode(true);
         slides.append(cloneSlide_first);
-        slides.preppend(cloneSlide_last);
+        slides.prepend(cloneSlide_last);
         //slides.insertBefore(cloneSlide_last, slides.firstElementChild);
       }
       makeClone();
@@ -171,6 +171,17 @@
         }
         dots[currentIdx].className += " active";
       };
+      let interval = setInterval(function () {
+        next.onclick();
+      }, 2000);
+      function slide_stop() {
+        clearInterval(interval);
+      }
+      function slide_start() {
+        interval = setInterval(function () {
+          next.onclick();
+        }, 2000);
+      }
     </script>
   </body>
 </html>
