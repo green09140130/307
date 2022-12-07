@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript slide animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #slideShow {
+        width: 1000px;
+        height: 300px;
+        position: relative;
+        margin: 50px auto;
+        overflow: hidden;
+      }
+      .slides {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.5s ease-out;
+      }
+      .slides img {
+        width: 1000px;
+      }
+      .slides li:not(:last-child) {
+        float: left;
+      }
+      .controller span {
+        position: absolute;
+        color: #fff;
+        text-align: center;
+        border-radius: 50%;
+        padding: 10px 20px;
+        top: 50%;
+        font-size: 1.3em;
+        cursor: pointer;
+      }
+      .prev {
+        left: 10px;
+      }
+      .prev:hover {
+        transform: translateX(-10px);
+      }
+      .next {
+        right: 10px;
+      }
+      .next:hover {
+        transform: translateX(10px);
+      }
+      .page {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+      }
+      .dot {
+        display: inline-block;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        transition: background-color 0.6s ease;
+      }
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slideShow">
+      <ul class="slides">
+        <li><img src="images/photo1.jpg" alt="photo1" /></li>
+        <li><img src="images/photo2.jpg" alt="photo2" /></li>
+        <li><img src="images/photo3.jpg" alt="photo3" /></li>
+        <li><img src="images/photo4.jpg" alt="photo4" /></li>
+        <li><img src="images/photo5.jpg" alt="photo5" /></li>
+        <li><img src="images/photo6.jpg" alt="photo6" /></li>
+      </ul>
+      <p class="controller">
+        <span class="prev">&lang;</span>
+        <span class="next">&rang;</span>
+      </p>
+      <div class="page">
+        <span class="dot" onclick="currentSlide(0)"></span>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+    <script>
+      let slides = document.querySelector(".slides");
+      let slideImg = document.querySelectorAll(".slides li");
+      let dots = document.getElementsByClassName("dot");
+      currentIdx = 0;
+      slideCount = slideImg.length;
+      prev = document.querySelector(".prev");
+      next = document.querySelector(".next");
+      slideWidth = 1000;
+      console.log(currentIdx);
+      dots[0].className += " active";
+      function makeClone() {
+        let cloneSlide_first = slideImg[0].cloneNode(true);
+        //let cloneSlide_last=slideImge[5].cloneNode(true);
+        let cloneSlide_last = slides.lastElementChild.cloneNode(true);
+        slides.append(cloneSlide_first);
+        slides.preppend(cloneSlide_last);
+        //slides.insertBefore(cloneSlide_last, slides.firstElementChild);
+      }
+      makeClone();
+      function initfunction() {
+        slides.style.width = slideWidth * (slideCount + 2) + "px";
+        slides.style.left = -slideWidth + "px";
+      }
+      initfunction();
+      function showSlide(n) {
+        for (let i = 0; i < slideCount; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[n].className += " active";
+        slides.style.left = -(n + 1) * slideWidth + "px";
+        slides.style.trasition = "0.5s";
+      }
+      function currentSlide(n) {
+        showSlide((currentIdx = n));
+      }
+      next.onclick = function () {
+        if (currentIdx <= slideCount - 1) {
+          slides.style.left = -(currentIdx + 2) * slideWidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (currentIdx === slideCount - 1) {
+          setTimeout(function () {
+            slides.style.left = -slideWidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          currentIdx = -1;
+        }
+        currentIdx += 1;
+        for (let i = 0; i < slideCount; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[currentIdx].className += " active";
+      };
+      prev.onclick = function () {
+        if (currentIdx >= 0) {
+          slides.style.left = -currentIdx * slideWidth + "px";
+          slides.style.transition = "0.5s";
+        }
+        if (currentIdx === 0) {
+          setTimeout(function () {
+            slides.style.left = -slideCount * slideWidth + "px";
+            slides.style.transition = "0s";
+          }, 500);
+          currentIdx = slideCount;
+        }
+        currentIdx -= 1;
+        for (let i = 0; i < slideCount; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[currentIdx].className += " active";
+      };
+    </script>
+  </body>
+</html>
