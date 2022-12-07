@@ -26,8 +26,14 @@
         top: 0;
         transition: 0.5s ease-out;
       }
-      .slides img {
+      .slides li {
         width: 1000px;
+        height: 300px;
+      }
+      .slides img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
       .slides li:not(:last-child) {
         float: left;
