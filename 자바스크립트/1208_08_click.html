@@ -56,24 +56,20 @@
         //   $("#photo img").attr("src", "../images/photo4.jpg");
         // });
         /*$("ul li a").click(function (e) {
-              e.preventDefault();
-            let txt = $(this).text();
-            let img_path = $("img").attr("src");
-            console.log(num);
-            let arr = ["봄", "여름", "가을", "겨울"];
-            img_path.replace(img_path.slice(-5,-6),txt.slice(-5));
-        });*/
-        $("ul li a").click(function (e) {
-          e.preventDefault();
+            e.preventDefault();
           let txt = $(this).text();
           let img_path = $("img").attr("src");
-          // console.log(num);
+          console.log(num);
           let arr = ["봄", "여름", "가을", "겨울"];
-          $("img").attr(
-            "src",
-            img_path.replace(img_path.slice(-5, -4), txt.slice(-1))
-          );
-        });
+          img_path.replace(img_path.slice(-5,-6),txt.slice(-5));
+      });*/
+      $("ul li a").click(function () {
+          let txt = $(this).text();
+          let img_path = $("img").attr("src");
+          console.log(num);
+          let arr = ["봄", "여름", "가을", "겨울"];
+          img_path.replace(img_path.slice(-5,-6),txt.slice(-5));
+          return false;
       });
     </script>
     <title>jQuery click()</title>
