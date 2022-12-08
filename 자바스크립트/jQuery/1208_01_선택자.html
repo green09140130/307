@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #p01 {
+        color: #0f0;
+        background-color: #00f;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <!-- <script src="../../js/test.js"></script> -->
+    <script>
+      //   $(document).ready(function () {
+      //     $("p").css("color", "#f00");
+      //   });
+      // $(function(){
+      //     $("p").css("color", "#f00");
+      // });
+      $(function () {
+        //$("#p01").css("color", "#f00");
+        //$("div.txt").css("color", "#f00");
+        //$("#p01,.txt").css("color", "#f00");
+        $("#p01")
+          .css("color", "#f00")
+          .css("font-size", "24px")
+          .css("backgroundColor", "#ff0");
+        $(".txt").css({
+          color: "#00f",
+          "font-size": "50px",
+          backgroundColor: "pink",
+        });
+      });
+    </script>
+    <title>jQuery 선택자</title>
+  </head>
+  <body>
+    <p>jquery</p>
+    <p id="p01">jquery</p>
+    <p class="txt">jquery</p>
+    <div class="txt">div태그</div>
+    <!-- <script>
+      $("p").css("color", "#f00");
+    </script> -->
+  </body>
+</html>

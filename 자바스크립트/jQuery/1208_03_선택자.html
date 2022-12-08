@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #p01 {
+        color: #0f0;
+        background-color: #00f;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        //속성선택자
+        //[name = "value"]
+        //$('li[class="html"]').css("color", "#f00");
+        //$('img[alt="photo1"]').css("width", "100px");
+        //$('li[class^="css"]').css("color", "#f00");
+        // $('img[alt^="photo"]').css("width", "100px");
+        //li요소중에서 class속성이 css로 시작하는 요소 선택
+        //$('li[class$="3"]').css("color", "#f00");
+        //li요소중에서 class속성이 3로 끝나는 요소 선택
+        // $('li[class*="as"]').css("color", "#f00");
+        //li요소중에서 class속성이 as포함되어 있는 요소 선택
+        //$(".container").children("p").text("자식요소입니다");
+        //$(".html").parent().css("color", "#f00");
+        // $(".html").parents().css("color", "#f00");
+        //$(".html").parentsUntil("body").css("color", "#f00");
+        //$(".html").next().css("color", "#f00");
+        // $(".html").nextAll().css("color", "#f00");
+        //$(".html").nextUntil(".css3").css("color", "#f00");
+        //$(".javascript").prev().css("color", "#f00");
+        //$(".container .css3").siblings().css("color", "#f00");
+        //$(".container li:not('.css3')").css("color", "#f00");
+        //$(".container li").not(".css3").css("color", "#f00");
+        //$(".container li").filter(".css3").css("color", "#f00");
+        //$(".container li").slice(-3, -1).css("color", "#f00");
+      });
+    </script>
+    <title>jQuery 선택자</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="html">html</li>
+        <li class="css">css</li>
+        <li class="css3">css3</li>
+        <li class="javascript">javascript</li>
+        <li class="jQuery">jQuery</li>
+      </ul>
+      <p><img src="../../images/photo1.jpg" alt="photo1" /></p>
+      <p><img src="../../images/photo2.jpg" alt="photo2" /></p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+    </div>
+    <div class="div1"><p>문단태그입니다.</p></div>
+    <div class="div1">
+      <p>텍스트와 inline속성을 가진 요소만 올수 있어요</p>
+      <div></div>
+    </div>
+    <div class="div1"><p>p태그는 중복해서 사용하면 안돼요</p></div>
+  </body>
+</html>

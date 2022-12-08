@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #p01 {
+        color: #0f0;
+        background-color: #00f;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        //$("li:first").css("border", "1px solid #f00");
+        //$("li:first-child").css("border", "1px solid #f00");
+        //$("li:last").css("border", "1px solid #f00");
+        //$("li:even").css("border", "1px solid #f00");
+        //$("div:odd").css("border", "1px solid #f00");
+        //$(".container p:first-of-type").css("border", "1px solid #f00");
+        //$("p:nth-last-child(1)").css("border", "1px solid #f00");
+        //$("p:only-child").css("border", "1px solid #f00");
+        //$("p:only-of-type").css("border", "1px solid #f00");
+        //$(".container > p").css("border", "1px solid #f00");
+        //$(".container p").css("border", "1px solid #f00");
+        //$("ul + p").css("border", "1px solid #f00");
+        //$("ul ~ p").css("border", "1px solid #f00");
+        // $("li:eq(1)").css("border", "1px solid #f00");
+        //$("li:gt(1)").css("border", "1px solid #f00");
+        //$("li:lt(1)").css("border", "1px solid #f00");
+        //$("li:not(:lt(1))").css("border", "1px solid #f00");
+        $(":header").css("border", "1px solid #f00");
+      });
+    </script>
+    <title>jQuery 선택자</title>
+  </head>
+  <body>
+    <h1>h1태그</h1>
+    <h2>h2태그</h2>
+    <h3>h3태그</h3>
+    <h4>h4태그</h4>
+    <h5>h5태그</h5>
+    <h6>h6태그</h6>
+    <div class="container">
+      <ul>
+        <li>
+          html
+          <p>웹페이지의 구조를 만듭니다.</p>
+        </li>
+        <li>css</li>
+        <li>css3</li>
+        <li>javascript</li>
+        <li>jQuery</li>
+      </ul>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+    </div>
+    <div class="div1"><p>문단태그입니다.</p></div>
+    <div class="div1">
+      <p>텍스트와 inline속성을 가진 요소만 올수 있어요</p>
+      <div></div>
+    </div>
+    <div class="div1"><p>p태그는 중복해서 사용하면 안돼요</p></div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        /*$(".container li:empty").text("blank");
+        $(".container li:contains(css)").text("blank");
+        $(".container:has(p)").text("blank");*/
+        //.container 클래스 하위에 p요소가 있을경우 .container클래스를 선택
+        //노드구조변경
+        /*$("ul").append('<li class="page">page</li>');
+        $("ul").prepend('<li class="page">page</li>');*/
+        $('<li class="page">page</li>').appendTo("ul");
+        $('<li class="page">page</li>').prependTo("ul");
+        //$(".container").clone().appendTo("body");
+        $(".container").clone().prependTo("body");
+        //$(".container p").wrap('<div class="in"></div>');
+        //$(".container p").wrapAll('<div class="in"></div>');
+        //$(".container p").wrapInner('<span class="in"></span>');
+        // $(".html").after('<li class="new">new</li>');
+        // $(".html").before('<li class="new">new</li>');
+        $('<li class="new">new</li>').insertAfter(".html");
+        $('<li class="new">new</li>').insertBefore(".html");
+        $(".cs").replaceWith('<li class="replace_css">대체된 서식</li>');
+        $('<li class="replace_css">대체된 서식</li>').replaceAll(".javascript");
+      });
+    </script>
+    <title>jQuery 선택자</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li class="html">html</li>
+        <li class="cs">css</li>
+        <li class="cs3">css3</li>
+        <li class="javascript">javascript</li>
+        <li class="jQuery">jQuery</li>
+        <li class="blank"></li>
+      </ul>
+      <p>portfolio</p>
+      <p>portfolio</p>
+      <p>portfolio</p>
+    </div>
+    <div class="div1"><p>문단태그입니다.</p></div>
+    <div class="div1">
+      <p>텍스트와 inline속성을 가진 요소만 올수 있어요</p>
+      <div></div>
+    </div>
+    <div class="div1"><p>p태그는 중복해서 사용하면 안돼요</p></div>
+  </body>
+</html>
