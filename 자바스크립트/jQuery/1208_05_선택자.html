@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        let txt = $("p").text();
+        console.log(txt);
+        let txt1 = txt.slice(0, 3);
+        console.log(txt1);
+        let txt2 = txt1.replace("오늘은", "내일은");
+        console.log(txt2);
+        console.log(txt.replace(txt.slice(0, 2), "내일"));
+        let txt3 = txt.replace(txt.slice(0, 2), "내일");
+        console.log(txt3);
+        console.log(txt3.replace(txt3.slice(4, 5), "금"));
+        let txt4 = txt
+          .replace(txt.slice(0, 2), "내일")
+          .replace(txt.slice(4, 5), "금");
+        console.log(txt4);
+      });
+    </script>
+    <title>jQuery 선택자</title>
+  </head>
+  <body>
+    <p>오늘은 목요일입니다</p>
+  </body>
+</html>

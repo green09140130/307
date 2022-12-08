@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style></style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        //$("p").attr("class", "study");
+        //$("img").attr("alt", "photo2").attr("id", "visual");
+        $("img").attr({ alt: "photo2", id: "visual" });
+        //$("p").removeAttr("class");
+        //$(".week").remove();
+        $(".week").empty();
+        // $("button").click(function () {
+        //   $("input").val("변경후");
+        // });
+        $("button").click(function () {
+          if ($("input").val() == "변경전") {
+            $("input").val("변경후");
+          } else {
+            $("input").val("변경전");
+          }
+        });
+      });
+    </script>
+    <title>jQuery attr()</title>
+  </head>
+  <body>
+    <p>오늘은 목요일입니다</p>
+    <img src="../images/photo1.jpg" alt="photo1" />
+    <p class="week">내일은 금요일</p>
+
+    <input type="text" value="변경전" />
+    <button>클릭하세요</button>
+  </body>
+</html>

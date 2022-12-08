@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #wrap {
+        width: 500px;
+        margin: 0 auto;
+      }
+      ul li {
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+      ul li a {
+        display: block;
+        padding: 10px 0;
+      }
+      ul li a:hover {
+        color: #000;
+        background: #ddd;
+      }
+      #photo img {
+        width: 500px;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        // $("ul li:nth-child(1) a").click(function () {
+        //   $("#photo img").attr("src", "../images/photo1.jpg");
+        // });
+        // $("ul li:nth-child(2) a").click(function () {
+        //   $("#photo img").attr("src", "../images/photo2.jpg");
+        // });
+        // $("ul li:nth-child(3) a").click(function () {
+        //   $("#photo img").attr("src", "../images/photo3.jpg");
+        // });
+        // $("ul li:nth-child(4) a").click(function () {
+        //   $("#photo img").attr("src", "../images/photo4.jpg");
+        // });
+        $("ul li a").click(function () {
+          let txt = $(this).text();
+          //let num = txt.slice(-1);
+          //let num = txt.substring(5);
+          let num = txt.substr(5, 1);
+          console.log(num);
+          let arr = ["봄", "여름", "가을", "겨울"];
+          $("#photo img")
+            .attr("src", "../images/" + txt + ".jpg")
+            .attr("alt", arr[num - 1]);
+        });
+      });
+    </script>
+    <title>jQuery click()</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="nav">
+        <ul>
+          <li><a href="#">photo1</a></li>
+          <li><a href="#">photo2</a></li>
+          <li><a href="#">photo3</a></li>
+          <li><a href="#">photo4</a></li>
+        </ul>
+      </div>
+      <div id="photo"><img src="../images/photo1.jpg" alt="photo1" /></div>
+    </div>
+  </body>
+</html>
