@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #wrap {
+        width: 500px;
+        margin: 0 auto;
+      }
+      ul li {
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+      ul li a {
+        display: block;
+        padding: 10px 0;
+      }
+      ul li a:hover,
+      ul li a.on {
+        color: #000;
+        background: #ddd;
+      }
+      #photo img {
+        width: 500px;
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        $("ul li a").click(function (e) {
+          e.preventDefault();
+          let num = $(this).parent().index();
+          console.log(num);
+          let img_path = $("img").attr("src");
+          $("img").attr({
+            src: img_path.replace(img_path.slice(-5, -4), num + 1),
+            alt: $(this).text(),
+          });
+          $("ul li a").attr("class", "");
+          $(this).attr("class", "on");
+        });
+      });
+    </script>
+    <title>jQuery click()</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="nav">
+        <ul>
+          <li><a href="#">봄</a></li>
+          <li><a href="#">여름</a></li>
+          <li><a href="#">가을</a></li>
+          <li><a href="#">겨울</a></li>
+        </ul>
+      </div>
+      <div id="photo"><img src="../images/photo1.jpg" alt="photo1" /></div>
+    </div>
+  </body>
+</html>

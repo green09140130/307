@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #ccc;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #wrap {
+        width: 500px;
+        margin: 0 auto;
+      }
+      ul {
+        overflow: hidden;
+      }
+      ul li {
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+      ul li a {
+        display: block;
+        padding: 10px 0;
+      }
+      ul li a:hover,
+      ul li a.on {
+        color: #000;
+        background: #ddd;
+      }
+      #photo {
+        width: 500px;
+        height: 500px;
+      }
+      .p01 {
+        background: url(../images/photo1.jpg);
+      }
+      .p02 {
+        background: url(../images/photo2.jpg);
+      }
+      .p03 {
+        background: url(../images/photo3.jpg);
+      }
+      .p04 {
+        background: url(../images/photo4.jpg);
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        $("ul li a").click(function (e) {
+          e.preventDefault();
+          let i = $(this).parent().index();
+          let txt = $("#photo").attr("class");
+          $("ul li a").attr("class", "");
+          $(this).attr("class", "on");
+          $("#photo").attr("class", txt.replace(txt.slice(-1), i + 1));
+        });
+      });
+    </script>
+    <title>jQuery click()</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="nav">
+        <ul>
+          <li><a href="#">봄</a></li>
+          <li><a href="#">여름</a></li>
+          <li><a href="#">가을</a></li>
+          <li><a href="#">겨울</a></li>
+        </ul>
+      </div>
+      <div id="photo" class="p01"></div>
+    </div>
+  </body>
+</html>
