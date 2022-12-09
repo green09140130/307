@@ -49,12 +49,18 @@
     <script>
       $(function () {
         $("#photo").css("background", "url(../images/photo1.jpg)");
+        //$("ul li:first a").addClass("on");
+        //$("ul li:nth-child(2) a").addClass("on");
+        //$("ul li").eq(0).children("a").addClass("on");
+        $("ul li").eq(0).find("a").addClass("on");
         $("ul li a").click(function (e) {
           e.preventDefault();
           let i = $(this).parent().index() + 1;
+          let bg_path = $("#photo").attr("style");
           $("ul li a").removeAttr("class");
           $(this).addClass("on");
-          //   $("#photo");
+          // $("#photo").css("background", "url(../images/photo" + i + ".jpg)");
+          $("#photo").attr("style", bg_path.replace(bg_path.slice(-8, -7), i));
         });
       });
     </script>
