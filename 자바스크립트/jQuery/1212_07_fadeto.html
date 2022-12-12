@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        /*$("#btn1").click(function () {
+          $("p").fadeTo(1000, 0);
+        });
+        $("#btn2").click(function () {
+          $("p").fadeTo(1000, 0.5);
+        });
+        $("#btn3").click(function () {
+          $("p").fadeTo(1000, 0.6);
+        });
+        $("#btn4").click(function () {
+          $("p").fadeTo(1000, 1);
+        });*/
+        $("body").append('<div id="page"></div>');
+        $("button").click(function () {
+          let i = $(this).text();
+          console.log(i);
+          $("p").fadeTo(1000, i, function () {
+            // $("#page").text("디스플레이 : " + $("p").css("display"));
+            /* $("#page")
+              .append("디스플레이 : " + $("p").css("display") + "<br>")
+              .append("불투명도 : " + $("p").css("opacity") + "<br>");*/
+            $("#page").html(
+              "디스플레이 : " +
+                $("p").css("display") +
+                "<br>" +
+                "불투명도 : " +
+                $("p").css("opacity") +
+                "<br>"
+            );
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="btn1">0</button>
+    <button id="btn2">0.5</button>
+    <button id="btn3">0.6</button>
+    <button id="btn4">1</button>
+  </body>
+</html>

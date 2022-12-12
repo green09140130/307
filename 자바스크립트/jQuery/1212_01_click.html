@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        $("#btn1").click(function () {
+          $("#txt1").text("<b>Hello word</b>");
+        });
+        $("#btn2").dblclick(function () {
+          $("#txt2").html("<b>Hello word</b>");
+        });
+        /*$("#btn3").click(function () {
+        $("#txt3 input").val("dolly duck");
+        });*/
+        let bo = true;
+        $("#btn3").click(function () {
+          if (bo) {
+            $("#txt3 input").val("dolly duck");
+          } else {
+            $("#txt3 input").val("Mickey mouse");
+          }
+          bo = !bo;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="txt1">This is a paragraph</p>
+    <p id="txt2">This is a paragraph</p>
+    <p id="txt3">Input Field : <input type="text" value="Mickey mouse" /></p>
+    <button id="btn1">Set text</button>
+    <button id="btn2">Set html</button>
+    <button id="btn3">Set value</button>
+  </body>
+</html>

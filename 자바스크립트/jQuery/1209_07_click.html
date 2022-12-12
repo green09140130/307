@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      body {
+        font-family: Arial, Helvetica, 돋움, Doctum, sans-serif;
+      }
+      .contents {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .col1 {
+        position: relative;
+        width: 33.333%;
+      }
+      .tabBtn li {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid #333;
+        background: #ccc;
+        z-index: 1;
+      }
+      .tabBtn li:last-child {
+        left: 100px;
+      }
+      .tabBtn li.on {
+        background: #fff;
+        border-bottom-color: #fff;
+      }
+      .tabCon {
+        position: relative;
+        top: 41px;
+        height: 150px;
+        border: 1px solid #333;
+      }
+      .tabCon li.on {
+        display: none;
+      }
+      #popup {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        left: 0;
+        top: 0;
+        z-index: 2;
+      }
+      .pop {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 400px;
+        background: #fff;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+    <script src="../../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        //$(".tabBtn li:first").addClass("on");
+        $(".tabBtn li").eq(0).addClass("on");
+        $(".tabCon li:last").addClass("on");
+        $("#popup").css("display", "none");
+        $("#open_popup").click(function () {
+          $("#popup").css("display", "block");
+          return false;
+        });
+        $("#close").click(function (event) {
+          event.preventDefault();
+          $("#popup").css("display", "none");
+        });
+        /*$(".tabBtn li:first").click(function () {
+          $(".tabBtn li").removeClass();
+          $(this).addClass("on");
+          $(".tabCon li").removeClass();
+          $(".tabCon li:last").addClass("on");
+        });
+        $(".tabBtn li:last").click(function () {
+          $(".tabBtn li").removeClass();
+          $(this).addClass("on");
+          $(".tabCon li").removeClass();
+          $(".tabCon li:first").addClass("on");
+        });*/
+        $(".tabBtn li").click(function () {
+          $(".tabBtn li").removeClass();
+          $(this).addClass("on");
+          let i = $(this).index();
+          console.log(i);
+          /*if (i) {
+            $(".tabCon li").removeClass().eq(0).addClass("on");
+          } else {
+            $(".tabCon li").removeClass().eq(1).addClass("on");
+          }*/
+          $(".tabCon li").removeClass().eq(i).siblings().addClass("on");
+        });
+      });
+    </script>
+    <title>jQuery click()</title>
+  </head>
+  <body>
+    <div class="contents">
+      <div class="col1">
+        <ul class="tabBtn">
+          <li>공지사항</li>
+          <li>갤러리</li>
+        </ul>
+        <ul class="tabCon">
+          <li>
+            <table>
+              <tr>
+                <td><a href="#" id="open_popup">공지사항 첫번째 아이템</a></td>
+                <td>2022.12.09</td>
+              </tr>
+              <tr>
+                <td><a href="#">공지사항 두번째 아이템</a></td>
+                <td>2022.12.09</td>
+              </tr>
+              <tr>
+                <td><a href="#">공지사항 세번째 아이템</a></td>
+                <td>2022.12.09</td>
+              </tr>
+              <tr>
+                <td><a href="#">공지사항 네번째 아이템</a></td>
+                <td>2022.12.09</td>
+              </tr>
+            </table>
+          </li>
+          <li>갤러리 내용입니다</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="popup">
+      <div class="pop">
+        <h1>팝업창입니다</h1>
+        <p>
+          팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다팝업창입니다
+        </p>
+        <p><a href="#" id="close">close</a></p>
+      </div>
+    </div>
+  </body>
+</html>

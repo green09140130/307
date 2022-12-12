@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+        transition: 1s linear;
+      }
+      .ani {
+        animation: ani_show 1s forwards;
+      }
+      .ani1 {
+        animation: ani_hide 1s forwards;
+      }
+      @keyframes ani_show {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes ani_hide {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      //$(선택자).show(speed,easing,callback)
+      //easing : "swing","linear"
+      $(function () {
+        $("#btn1").click(function () {
+          $("p").removeClass().addClass("ani");
+        });
+        $("#btn2").click(function () {
+          $("p").removeClass().addClass("ani1");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="btn1">Show</button>
+    <button id="btn2">hide</button>
+    <button id="btn3">toggle</button>
+  </body>
+</html>

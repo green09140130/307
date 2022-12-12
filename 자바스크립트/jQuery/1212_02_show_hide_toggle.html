@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        $("body").append('<div id="div1"></div>');
+        $("#btn2").click(function () {
+          $("p").hide(1000, function () {
+            $("#div1").text("디스플레이 : " + $("p").css("display"));
+          });
+          //$("p").css("display", "none");
+        });
+        $("#btn1").click(function () {
+          $("p").show(500, function () {
+            $("#div1").text("디스플레이 : " + $("p").css("display"));
+          });
+          // $("p").css("display", "");
+        });
+        $("#btn3").click(function () {
+          $("p").toggle(500, function () {
+            $("#div1").text("디스플레이 : " + $("p").css("display"));
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="btn1">Show</button>
+    <button id="btn2">hide</button>
+    <button id="btn3">toggle</button>
+  </body>
+</html>
