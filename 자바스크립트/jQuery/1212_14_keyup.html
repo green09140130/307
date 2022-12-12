@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      textarea {
+        resize: none;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        $("#msgbox").keyup(function () {
+          //msgbos에 텍스트를 입력할때
+          let num = $(this).val().length;
+          console.log(num);
+          $("h1").text(150 - num);
+          let len = $("h1").text();
+          console.log(len);
+          if (len > 0) {
+            $("h1").css("color", "#00f");
+          } else {
+            $("h1").css("color", "#f00");
+            $("#status").text(Math.abs(len) + "글자를 초과하였습니다");
+          }
+          $("#btn").click(function () {
+            $("h1").text("150").css("color", "#000");
+            $("#msgbox").val("");
+            $("#status").text("");
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>남은 글자수</p>
+    <h1>150</h1>
+    <textarea name="msg" id="msgbox" cols="30" rows="10"></textarea>
+    <div id="status"></div>
+    <button id="btn">초기화</button>
+  </body>
+</html>

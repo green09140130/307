@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        $("body").prepend('<div id="page"></div>');
+        $("#btn1").click(function () {
+          $("p").slideUp(1000, "swing", function () {
+            myfnc();
+          });
+        });
+        $("#btn2").click(function () {
+          $("p").slideDown(1000, "linear", myfnc);
+        });
+        $("#btn3").click(function () {
+          $("p").slideToggle(1000, myfnc);
+        });
+        function myfnc() {
+          $("#page").text("display : " + $("p").css("display"));
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <p></p>
+    <button id="btn1">slideup</button>
+    <button id="btn2">slidedown</button>
+    <button id="btn3">sldietoggle</button>
+  </body>
+</html>

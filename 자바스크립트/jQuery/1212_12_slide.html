@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 500px;
+        background: #eee;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.js"></script>
+    <script>
+      $(function () {
+        //$(".btn2").css("display", "none");
+        $(".btn2").hide();
+        $(".btn1").click(function () {
+          $("div").slideUp(1000, "linear", function () {
+            $(".btn1").hide();
+            $(".btn2").show();
+          });
+        });
+        $(".btn2").click(function () {
+          $("div").fadeIn(1000, "linear", function () {
+            $(".btn1").show();
+            $(".btn2").hide();
+          });
+        });
+        $(".btn3").click(function () {
+          $("div").slideToggle(1000);
+        });
+        $(".btn4").click(function () {
+          $("div").fadeTo(1000, 0.3);
+        });
+        $(".btn5").click(function () {
+          $("div").fadeTo(1000, 1);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>
+      <button class="btn1">slideup</button>
+      <button class="btn2">fadeIn</button>
+    </p>
+    <p>
+      <button class="btn3">slideToggle</button>
+    </p>
+    <p>
+      <button class="btn4">fadeTo(0.3)</button>
+      <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book. It has survived not only five centuries, but
+      also the leap into electronic typesetting, remaining essentially
+      unchanged. It was popularised in the 1960s with the release of Letraset
+      sheets containing Lorem Ipsum passages, and more recently with desktop
+      publishing software like Aldus PageMaker including versions of Lorem
+      Ipsum.
+    </div>
+  </body>
+</html>
