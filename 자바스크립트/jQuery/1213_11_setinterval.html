@@ -21,7 +21,27 @@
       }
     </style>
     <script src="../js/jquery-3.6.1.min.js"></script>
-    <script></script>
+    <script>
+      $(function () {
+        function myfnc() {
+          $(".tri")
+            .animate({ top: "-5px" }, 500, "linear")
+            .animate({ top: "5px" }, 500, "linear");
+        }
+        let interval = setInterval(myfnc, 1000);
+        let status = true;
+        $("button").click(function () {
+          if (status) {
+            $(this).text("play");
+            clearInterval(interval);
+          } else {
+            $(this).text("stop");
+            interval = setInterval(myfnc, 1000);
+          }
+          status = !status;
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="tri"></div>
