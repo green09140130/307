@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box_wrap {
+        height: 350px;
+      }
+      .box {
+        width: 500px;
+        overflow: hidden;
+      }
+      .box img {
+        width: 500px;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function(){
+        $(".left").click(function(){
+          $(".box").animate({width:"0"},1000);
+        });
+        $(".right").click(function(){
+          $(".box").animate({width:"500px"},1000);
+        });
+        $(".up").click(function(){
+          $(".box").slideUp(1000);
+        });
+        $(".down").click(function(){
+          $(".box").slideDown(1000);
+        });
+      });
+      
+    </script>
+  </head>
+  <body>
+    <div class="box_wrap">
+        <div class="box"><img src="../images/photo1.jpg" alt="photo1">
+        </div>
+    </div>
+    <button class="left">slideleft</button>
+    <button class="right">slideright</button>
+    <button class="up">slideUp</button>
+    <button class="down">slideDown</button>
+</html>

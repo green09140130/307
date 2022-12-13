@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .txt1 {
+        background: aqua;
+      }
+      .txt2 {
+        background: pink;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      //animate({속성},speed,easing,callbak);
+      $(function(){
+        $(".btn1").click(function(){
+            $(".txt1").animate({marginLeft:"500px",fontSize:"32px"},2000,"linear",function(){
+                alert("미션 완료");
+            });
+        });
+        //$(".btn1").click();
+        //$(".btn1").trigger("click");
+        //함수를 강제로 실행(호출)
+        $(".btn2").click(function(){
+            $(".txt2").animate({marginLeft:"+=50px"},2000,"linear");
+        });
+        $(".btn3").click(function(){
+            $(".txt1").animate({marginLeft:"500px",fontSize:"32px"},2000,"linear",function(){
+                alert("미션 완료");
+            });
+            $(".txt2").delay(2000).animate({marginLeft:"+=50px"},2000,"linear");
+        });
+      });
+      
+    </script>
+  </head>
+  <body>
+    <p><button class="btn1">버튼1</button></p>
+    <span class="txt1">500px 이동</span>
+    <p><button class="btn2">버튼2</button></p>
+    <span class="txt2">50px씩 이동</span>
+    <p><button class="btn3">한꺼번에 실행</button></p>
+</html>
