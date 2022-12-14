@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ball {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #f00;
+        margin-top: 20px;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("button").click(function () {
+          //let effect = $("select > option:selected").val();
+          let effect = $("select > option:selected").text();
+          console.log("text : " + effect);
+          //animate({속성:"속성값",속성:"속성값"},speed,easing,callback);
+          $(".ball")
+            .animate({ left: "500px" }, 1000, effect)
+            .animate({ left: 0 }, 1000, effect);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>basic :: animate easing</h1>
+    <select name="ease" id="ease">
+      <option value="swing">swing</option>
+      <option value="linear">linear</option>
+      <option value="easeInCubic">easeInCubic</option>
+      <option value="easeInOutBounce">easeInOutBounce</option>
+    </select>
+    <button>move</button>
+    <div class="ball"></div>
+  </body>
+</html>
