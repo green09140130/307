@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+ div.photo {
+    width: 600px;
+    overflow: hidden;
+ }
+ div.photo img {
+    width: 100%;
+ }
+  </style>
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function(){
+        /*$("button").eq(0).click(function(){
+        $(".photo").slideUp(1000,"swing",function(){
+            $(this).slideDown(1000,"swing");
+        });
+        });
+        $("button").eq(1).click(function(){
+        $(".photo").slideUp(1000,"linear",function(){
+            $(this).slideDown(1000,"linear");
+        });
+        });
+        $("button").eq(2).click(function(){
+        $(".photo").slideUp(1000,"easeOutQuart",function(){
+            $(this).slideDown(1000,"easeOutQuart");
+        });
+        });
+        $("button").eq(3.click(function(){
+        $(".photo").slideUp(1000,"easeInOutElastic",function(){
+            $(this).slideDown(1000,"easeInOutElastic");
+        });
+        });*/
+        /*$("button").click(function(){
+          let effect = $(this).text();
+          $(".photo").slideUp(1000,effect,function(){
+            $(this).slideDown(1000,effect);
+        });
+        });*/
+        $("button").click(function(){
+          let effect = $(this).attr("data-ease");
+          $(".photo").slideUp(1000,effect,function(){
+            $(this).slideDown(1000,effect);
+        });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="photo"><img src="../images/photo1.jpg" alt="photo1"></div>
+    <button data-ease="swing">스윙</button>
+    <button data-ease="linear">리니어</button>
+    <button data-ease="easeOutQuart">OutQuart</button>
+    <button data-ease="easeInOutElastic">InOutElastic</button>
+    <button data-ease="easeInOutQuad">InOutQuad</button>
+    <button data-ease="easeOutBounce">OutBounce</button>
+  </body>
+</html>
