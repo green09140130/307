@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #ccc;
+        top: 100px;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $(".move").click(function () {
+          $("div")
+            .animate({ left: "500px", opacity: "0.5" }, 2000)
+            .animate({ top: "200px", opacity: "1" }, 2000)
+            .animate({ left: "0px", opacity: "1" }, 2000)
+            .animate({ top: "100px", opacity: "1" }, 2000);
+        });
+        $(".stop1").click(function () {
+          $("div").stop(true, true);
+        });
+        $(".stop2").click(function () {
+          $("div").stop(true, false);
+        });
+        $(".stop3").click(function () {
+          $("div").stop(false, true);
+        });
+        $(".stop4").click(function () {
+          $("div").stop();
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div></div>
+    <button class="move">move</button>
+    <button class="stop1">true true</button>
+    <button class="stop2">true false</button>
+    <button class="stop3">false true</button>
+    <button class="stop4">false false</button>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      nav {
+      }
+      .gnb_wrap,
+      .lnb_wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+      }
+      .gnb,
+      .lnb {
+        float: right;
+        width: 800px;
+      }
+      .sub {
+        width: 100%;
+        background: #ccc;
+        overflow: hidden;
+      }
+      .gnb li,
+      .lnb > li {
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+      .gnb li a,
+      .lnb li a {
+        display: block;
+        width: 100%;
+      }
+      .gnb > li:hover > a,
+      .gnb > li > a.on,
+      .lnb li a:hover {
+        background: #ddd;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $(".lnb").css("display", "none");
+        $(".gnb li,.lnb").hover(
+          function () {
+            $(".lnb").stop().slideDown(1000);
+          },
+          function () {
+            $(".lnb").stop().slideUp(1000);
+          }
+        );
+        $(".lnb > li").hover(
+          function () {
+            let i = $(this).index();
+            console.log(i);
+            $(".gnb li a").removeClass("on");
+            $(".gnb li").eq(i).find("a").addClass("on");
+          },
+          function () {
+            $(".gnb li a").removeClass("on");
+          }
+        );
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="gnb_wrap">
+        <ul class="gnb">
+          <li><a href="#">menu1</a></li>
+          <li><a href="#">menu2</a></li>
+          <li><a href="#">menu3</a></li>
+          <li><a href="#">menu4</a></li>
+        </ul>
+      </div>
+      <div class="sub">
+        <div class="lnb_wrap">
+          <ul class="lnb">
+            <li>
+              <ul>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>

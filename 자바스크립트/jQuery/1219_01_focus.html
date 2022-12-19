@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $("input")
+          .val("아이디를 입력하세요")
+          .css({ color: "#777", backgroundColor: "#f00" });
+        $("input").focus(function () {
+          //input요소에 커서가 옮겨질때
+          $(this).val("").css("backgroundColor", "#fff");
+        });
+        $("input").blur(function () {
+          //input요소에 커서가 사라질때
+          if ($(this).val() == "") {
+            $(this).val("아이디입력");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" />
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #000;
+        cursor: pointer;
+        padding: 20px;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("div").click(function () {
+          let coordinate = $(this).offset();
+          console.log(coordinate);
+          $("body").append('<p id="page"></p>');
+          $("#page").text(
+            this.tagName +
+              "태그의 좌표는 " +
+              coordinate.top +
+              "," +
+              coordinate.left +
+              "height : " +
+              $(this).height() +
+              "px" +
+              "innerHeight : " +
+              $(this).innerHeight() +
+              "px" +
+              "outerHeight : " +
+              $(this).outerHeight() +
+              "px"
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

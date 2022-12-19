@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .out {
+        width: 300px;
+        height: 200px;
+        margin: 0 20px;
+        background: #ccc;
+        float: left;
+      }
+      .in {
+        width: 60%;
+        height: 60%;
+        margin: 10px auto;
+        background: #fc0;
+      }
+      p {
+        line-height: 16px;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        let i = 0;
+        $(".overout")
+          .mouseover(function () {
+            $("p:first", this).text("mouseover");
+            $("p:last", this).text(++i);
+          })
+          .mouseout(function () {
+            $("p:first", this).text("mouseout");
+          });
+        let n = 0;
+        $(".enterleave")
+          .mouseenter(function () {
+            $("p:first", this).text("mouseenter");
+            $("p:last", this).text(++n);
+          })
+          .mouseleave(function () {
+            $("p:first", this).text("mouseleave");
+          });
+        let m = 0;
+        $(".hover").hover(
+          function () {
+            $("p:first", this).text("hover");
+            $("p:last", this).text(++n);
+          },
+          function () {
+            $("p:first", this).text("hover아닐때");
+          }
+        );
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="out overout">
+      <p>move your mouse</p>
+      <div class="in overout">
+        <p>move your mouse</p>
+        <p>0</p>
+      </div>
+      <p>0</p>
+    </div>
+    <div class="out enterleave">
+      <p>move your mouse</p>
+      <div class="in enterleave">
+        <p>move your mouse</p>
+        <p>0</p>
+      </div>
+      <p>0</p>
+    </div>
+    <div class="out hover">
+      <p>move your mouse</p>
+      <div class="in hover">
+        <p>move your mouse</p>
+        <p>0</p>
+      </div>
+      <p>0</p>
+    </div>
+  </body>
+</html>

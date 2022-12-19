@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+      nav {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      nav > ul {
+        width: 800px;
+        float: right;
+      }
+      nav > ul > li {
+        position: relative;
+        float: left;
+        width: 25%;
+      }
+      ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        background: #ccc;
+        line-height: 40px;
+      }
+      nav > ul > li > a:hover,
+      /* nav > ul > li:hover > a, */
+      nav > ul > li > a.on {
+        background: #8ac007;
+      }
+      .sub {
+        position: absolute;
+        display: none;
+        width: 100%;
+      }
+      .sub li a {
+        background: #fff;
+        line-height: 30px;
+      }
+      .sub li a:hover {
+        background: #000;
+        color: #fff;
+      }
+      .visual {
+        width: 1280px;
+        margin: 0 auto;
+      }
+      .visual img {
+        width: 100%;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        /*$(".menu").hover(
+          function () {
+            $(this).find(".sub").css("display", "block");
+            $(this).children("a").addClass("on");
+          },
+          function () {
+            $(this).find(".sub").css("display", "none");
+            $(this).children("a").removeClass("on");
+          }
+        );*/
+        $(".menu").hover(
+          function () {
+            $(this).find(".sub").stop().slideDown(300);
+            $(this).children("a").addClass("on");
+          },
+          function () {
+            $(this).find(".sub").stop().slideUp(300);
+            $(this).children("a").removeClass("on");
+          }
+        );
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li class="menu">
+          <a href="#">menu1</a>
+          <ul class="sub">
+            <li><a href="#">submenu1</a></li>
+            <li><a href="#">submenu2</a></li>
+            <li><a href="#">submenu3</a></li>
+            <li><a href="#">submenu4</a></li>
+            <li><a href="#">submenu5</a></li>
+          </ul>
+        </li>
+        <li class="menu">
+          <a href="#">menu2</a>
+          <ul class="sub">
+            <li><a href="#">submenu1</a></li>
+            <li><a href="#">submenu2</a></li>
+            <li><a href="#">submenu3</a></li>
+            <li><a href="#">submenu4</a></li>
+            <li><a href="#">submenu5</a></li>
+          </ul>
+        </li>
+        <li class="menu">
+          <a href="#">menu3</a>
+          <ul class="sub">
+            <li><a href="#">submenu1</a></li>
+            <li><a href="#">submenu2</a></li>
+            <li><a href="#">submenu3</a></li>
+            <li><a href="#">submenu4</a></li>
+            <li><a href="#">submenu5</a></li>
+          </ul>
+        </li>
+        <li class="menu">
+          <a href="#">menu4</a>
+          <ul class="sub">
+            <li><a href="#">submenu1</a></li>
+            <li><a href="#">submenu2</a></li>
+            <li><a href="#">submenu3</a></li>
+            <li><a href="#">submenu4</a></li>
+            <li><a href="#">submenu5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="visual"><img src="../images/photo1.jpg" alt="photo1" /></div>
+  </body>
+</html>

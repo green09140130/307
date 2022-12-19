@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        cursor: pointer;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("#sel").change(function () {
+          let txt = $("#sel option:selected").text();
+          $("body").append('<a id="page"></a>');
+          //$("#page").text(txt);
+          let src = $(this).val();
+          $("#page").text(src);
+          location.href = src;
+        });
+        $("div").dblclick(function () {
+          $(this).css("backgroundColor", "#f00");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <select name="url" id="sel">
+      <option value="">선택안함</option>
+      <option value="http://www.naver.com">네이버</option>
+      <option value="http://www.daum.net">다음</option>
+      <option value="http://www.google.com">구글</option>
+    </select>
+    <div></div>
+  </body>
+</html>

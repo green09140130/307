@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 100px 0 0 100px;
+      }
+      li {
+        position: relative;
+        width: 115px;
+        height: 94px;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .over {
+        position: absolute;
+        width: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $("li").hover(
+          function () {
+            if ($(this).attr("id") != current.attr("id")) {
+              $(this)
+                .find(".over")
+                .stop()
+                .animate({ left: "-100px", top: "100px" }, 500, "easeOutQuart");
+            }
+          },
+          function () {
+            if ($(this).attr("id") != current.attr("id")) {
+              $(this)
+                .find(".over")
+                .stop()
+                .animate({ left: "0px", top: "0px" }, 500, "easeOutQuart");
+            }
+          }
+        );
+        let current;
+        function myfnc(str) {
+          current = $("#" + str);
+          setTimeout(function () {
+            current
+              .find(".over")
+              .stop()
+              .animate({ left: "-100px", top: "100px" }, 500, "easeOutQuart");
+          }, 1000);
+          current.css("cursor", "default");
+        }
+        myfnc("menu1");
+        console.log(current);
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li id="menu1">
+        <img src="../images/menu1_over.jpg" alt="menu1_over" />
+        <div class="over"><img src="../images/menu1.jpg" alt="menu1" /></div>
+      </li>
+      <li id="menu2">
+        <img src="../images/menu2_over.jpg" alt="menu2_over" />
+        <div class="over"><img src="../images/menu2.jpg" alt="menu2" /></div>
+      </li>
+      <li id="menu3">
+        <img src="../images/menu3_over.jpg" alt="menu3_over" />
+        <div class="over"><img src="../images/menu3.jpg" alt="menu3" /></div>
+      </li>
+      <li id="menu4">
+        <img src="../images/menu4_over.jpg" alt="menu4_over" />
+        <div class="over"><img src="../images/menu4.jpg" alt="menu4" /></div>
+      </li>
+      <li id="menu5">
+        <img src="../images/menu5_over.jpg" alt="menu5_over" />
+        <div class="over"><img src="../images/menu5.jpg" alt="menu5" /></div>
+      </li>
+    </ul>
+  </body>
+</html>

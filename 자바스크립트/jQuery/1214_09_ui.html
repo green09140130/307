@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 500px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #000;
+      }
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #f00;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        let first_box = $(".ball1").attr("data-ease");
+        let second_box = $(".ball2").attr("data-ease");
+        let third_box = $(".ball3").attr("data-ease");
+        let fouth_box = $(".ball4").attr("data-ease");
+        $("button").click(function () {
+          $(".ball1")
+            .animate({ left: 480 }, 1000, first_box)
+            .animate({ left: 10 }, 1000, first_box);
+
+          $(".ball2")
+            .animate({ left: 480 }, 1000, second_box)
+            .animate({ left: 10 }, 1000, second_box);
+
+          $(".ball3")
+            .animate({ left: 480 }, 1000, $(".ball3").attr("data-ease"))
+            .animate({ left: 10 }, 1000, $(".ball3").attr("data-ease"));
+            
+          $(".ball4")
+            .animate({ left: 480 }, 1000, $(".ball4").attr("data-ease"))
+            .animate({ left: 10 }, 1000, $(".ball4").attr("data-ease"));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>basic::animate easing</h1>
+    <button>move</button>
+    <div class="box box1">
+      linear
+      <div class="ball ball1" data-ease="linear"></div>
+    </div>
+    <div class="box box2">
+      linear
+      <div class="ball ball2" data-ease="swing"></div>
+    </div>
+    <div class="box box3">
+      easeOutBounce
+      <div class="ball ball3" data-ease="easeOutBounce"></div>
+    </div>
+    <div class="box box4">
+      easeInOutElastic
+      <div class="ball ball4" data-ease="easeInOutElastic"></div>
+    </div>
+  </body>
+</html>

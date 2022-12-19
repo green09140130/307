@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      .stop li {
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+      }
+      .first li {
+        background: #ccc;
+      }
+      .second li {
+        background: #000;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        $(".first li").hover(
+          function () {
+            $(this).animate({ width: "200px" }, 500);
+          },
+          function () {
+            $(this).animate({ width: "50px" }, 500);
+          }
+        );
+        $(".second li").hover(
+          function () {
+            $(this).stop().animate({ width: "200px" }, 500);
+          },
+          function () {
+            $(this).stop().animate({ width: "50px" }, 500);
+          }
+        );
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul class="stop first">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul class="stop second">
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>

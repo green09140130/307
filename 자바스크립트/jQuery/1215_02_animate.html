@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+      .container {
+        width: 600px;
+        border: 1px solid #000;
+      }
+      .txt {
+        width: 10%;
+        background: #f00;
+        text-align: center;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        let i = 1;
+        /* $(".go").click(function () {
+          i++; //i = i+1;
+          console.log(i);
+          if (i <= 10) {
+            $(".txt").animate({ marginLeft: "+=10%" }, 300);
+          }
+        });
+        $(".back").click(function () {
+          i--; //i = i-1;
+          console.log(i);
+          if (i >= 1) {
+            $(".txt").animate({ marginLeft: "-=10%" }, 300);
+          }
+        });*/
+        $("button").click(function () {
+          if (!$(".txt").is(":animated")) {
+            //txt클래스를 갖고 있는 요소가 애니메이션 중이면 동작하지 않는다
+            if ($(this).hasClass("back")) {
+              i--;
+              if (i < 1) {
+                i = 1;
+                return false;
+                //exit 함수종료
+              }
+              $(".txt").animate({ marginLeft: "-=10%" }, 300);
+            } else {
+              i++;
+              if (i > 10) {
+                i = 10;
+                return false;
+              }
+              $(".txt").animate({ marginLeft: "+=10%" }, 300);
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>
+      <button class="back">Back</button>
+      <button class="go">Go</button>
+    </p>
+    <div class="container">
+      <div class="txt">내용1</div>
+    </div>
+  </body>
+</html>

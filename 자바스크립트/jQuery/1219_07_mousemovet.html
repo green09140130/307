@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+      div {
+        position: fixed;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        //$(document).mousemove(function (e) {
+        $(document).on("mousemove", function (e) {
+          $(".clientX").text("브라우저를 기준으로 한 x좌표 : " + e.clientX);
+          $(".clientY").text("브라우저를 기준으로 한 y좌표 : " + e.clientY);
+          $(".pageX").text("페이지를 기준으로 한 x좌표 : " + e.pageX);
+          $(".pageY").text("페이지를 기준으로 한 y좌표 : " + e.pageY);
+          $(".screenX").text("화면을 기준으로 한 x좌표 : " + e.screenX);
+          $(".screenY").text("화면을 기준으로 한 y좌표 : " + e.screenY);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>mousemove</h1>
+      <p>clientX - <span class="clientX">0</span></p>
+      <p>clientY - <span class="clientY">0</span></p>
+      <p>pageX - <span class="pageX">0</span></p>
+      <p>pageY - <span class="pageY">0</span></p>
+      <p>screenX - <span class="screenX">0</span></p>
+      <p>screenY - <span class="screenY">0</span></p>
+    </div>
+  </body>
+</html>

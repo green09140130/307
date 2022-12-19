@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #000;
+        transition: 1s;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        /*$("button").on("mouseover focus", function () {
+          $("div").css("backgroundColor", "#f00");
+        });*/
+        /*$("button").on({
+          mouseover: function () {
+            $("div").css("backgroundColor", "#f00");
+          },
+          focus: function () {
+            $("div").css("backgroundColor", "#0f0");
+          },
+        });*/
+        let n = 0;
+        $("div").css("cursor", "pointer");
+        $("div").on("click", function () {
+          $(this).width($(this).width() * 2);
+          n++; //n=n+1; n+=1
+          console.log(n);
+          if (n >= 3) {
+            $(this).off(); //이벤트제거
+            n = 0;
+          }
+        });
+        $("div").trigger("click");
+      });
+    </script>
+  </head>
+  <body>
+    <button>click</button>
+    <div></div>
+  </body>
+</html>

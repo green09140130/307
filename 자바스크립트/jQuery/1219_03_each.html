@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style: none;
+      }
+      li {
+        float: left;
+        width: 100px;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        /* $("li").eq(0).css("backgroundColor", "#f0f");
+        $("li").eq(1).css("backgroundColor", "#0f0");
+        $("li").eq(2).css("backgroundColor", "#00f");
+        $("li").eq(3).css("backgroundColor", "#ff0");*/
+        $("li").css("cursor", "pointer");
+        $("li").click(function () {
+          let bg = $(this).text();
+          //$("body").css("backgroundColor", bg);
+          $("body").animate({ backgroundColor: bg }, 1000);
+        });
+        $("li").each(function (index, element) {
+          console.log(index);
+          console.log(element);
+          let num = $(this).data("test");
+          console.log(num);
+          $(this).css("backgroundColor", $(this).text());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li data-test="11">#8ac007</li>
+      <li data-test="22">#0ff</li>
+      <li data-test="33">#00f</li>
+      <li data-test="44">#ff0</li>
+    </ul>
+  </body>
+</html>

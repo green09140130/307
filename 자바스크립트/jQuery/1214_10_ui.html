@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        width: 500px;
+        height: 50px;
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #000;
+      }
+      .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #f00;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        //$("button").click(function () {
+        $(".box").each(function () {
+          let effect = $(this).find(".ball").attr("data-ease");
+          console.log(effect);
+          /* $(this)
+            .find(".ball")
+            .animate({ left: 480 }, 500, effect)
+            .animate({ left: 10 }, 500, effect);*/
+        });
+        //});
+      });
+    </script>
+  </head>
+  <body>
+    <h1>basic::animate easing</h1>
+    <button>move</button>
+    <div class="box box1">
+      linear
+      <div class="ball" data-ease="linear"></div>
+    </div>
+    <div class="box box2">
+      linear
+      <div class="ball" data-ease="swing"></div>
+    </div>
+    <div class="box box3">
+      easeOutBounce
+      <div class="ball" data-ease="easeOutBounce"></div>
+    </div>
+    <div class="box box4">
+      easeInOutElastic
+      <div class="ball" data-ease="easeInOutElastic"></div>
+    </div>
+  </body>
+</html>
