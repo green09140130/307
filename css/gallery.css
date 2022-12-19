@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font: 1em Arial, "맑은 고딕", 돋움, Doctum, sans-serif;
+}
+#wrap {
+  width: 640px;
+  height: 400px;
+  margin: 0 auto;
+  background: #e3e3e3;
+  text-align: center;
+}
+#bigimg {
+  width: 600px;
+  margin: 0 auto;
+}
+#bigimg img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+}
+.gallery {
+  /* display: inline-block; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.gallery img {
+  width: 100px;
+  border: 2px solid #afafaf;
+}
+
+.gallery img:hover {
+  border-color: #fff;
+}
+
+.gallery img.on {
+  border-color: #f90;
+}
