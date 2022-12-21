@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      #wrap {
+        width: 500px;
+        margin: 0 auto;
+      }
+      #visual {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        /* overflow: hidden; */
+      }
+      #visual ul {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      #visual ul li {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        line-height: 500px;
+      }
+      #visual .visual0 {
+        left: 0;
+        background: #f00;
+      }
+      #visual .visual1 {
+        left: 100%;
+        background: #0f0;
+      }
+      #visual .visual2 {
+        left: 200%;
+        background: #0ff;
+      }
+      #visual .visual3 {
+        left: 300%;
+        background: #f0f;
+      }
+      #page li {
+        background: #000;
+        display: inline-block;
+        /*float: left;*/
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: relative;
+        left: 40%;
+        bottom: 50px;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      #page li a {
+        display: block;
+        text-indent: -9999px;
+      }
+      #page li.on {
+        background: #fff;
+      }
+      #btn {
+        clear: both;
+        text-align: center;
+      }
+      #btn li {
+        cursor: pointer;
+        width: 100px;
+        border: 1px solid #000;
+        text-align: center;
+        display: inline-block;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        let current = 0;
+        function move(i) {
+          if (current == i) return;
+          $("#visual>ul>li")
+            .eq(current)
+            .css({ left: "0" })
+            .animate({ left: "-100%" });
+          $("#visual>ul>li").eq(i).css({ left: "100%" }).animate({ left: "0" });
+          current = i;
+        }
+        $("#page>li").click(function (e) {
+          e.preventDefault();
+          var i = $(this).index();
+          $("#page>li").removeClass("on");
+          $(this).addClass("on");
+          move(i);
+        });
+        let interval = setInterval(timer, 1000);
+        function timer() {
+          var n = current + 1;
+          if (n == $("#visual>ul>li").length) {
+            n = 0;
+          }
+          $("#page>li").eq(n).trigger("click");
+        }
+        function timer_prev() {
+          var n = current - 1;
+          if (n == $("#visual>ul>li").length) {
+            n = 0;
+          }
+          console.log("n :" + n);
+          $("#page>li").eq(n).trigger("click");
+        }
+        $(".next").click(function () {
+          timer();
+        });
+        $(".prev").click(function () {
+          timer_prev();
+        });
+        $("#page, #btn").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(timer, 1000);
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="visual">
+        <ul>
+          <li class="visual0"><h1>배너이미지1</h1></li>
+          <li class="visual1"><h1>배너이미지2</h1></li>
+          <li class="visual2"><h1>배너이미지3</h1></li>
+          <li class="visual3"><h1>배너이미지4</h1></li>
+        </ul>
+      </div>
+      <ul id="page">
+        <li class="on"><a href="#">배너1</a></li>
+        <li><a href="#">배너2</a></li>
+        <li><a href="#">배너3</a></li>
+        <li><a href="#">배너4</a></li>
+      </ul>
+      <ul id="btn">
+        <li class="prev">이전</li>
+        <li class="next">다음</li>
+      </ul>
+    </div>
+  </body>
+</html>

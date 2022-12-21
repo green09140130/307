@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      body {
+        /* overflow: hidden; */
+      }
+      #menu {
+        position: fixed;
+        top: 50%;
+        left: 0;
+        margin-top: -100px;
+        z-index: 1;
+      }
+      #menu li a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: #000;
+        opacity: 0.8;
+        transition: all 0.5s;
+      }
+      #menu li:hover a {
+        font-size: 24px;
+        opacity: 1;
+        color: #fff;
+        border-color: #fff;
+      }
+      #menu li.on a {
+        background: #fff;
+        border-color: #d4164c;
+        font-size: 24px;
+        opacity: 1;
+      }
+      section {
+        width: 100%;
+        /* height: 100%; */
+        position: relative;
+      }
+      section:nth-child(1) {
+        background: red;
+      }
+      section:nth-child(2) {
+        background: yellow;
+      }
+      section:nth-child(3) {
+        background: blue;
+      }
+      section:nth-child(4) {
+        background: green;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+      $(function () {
+        let ht = $(window).height();
+        $("section").height(ht);
+        $(window).resize(function () {
+          let ht = $(window).height();
+          $("section").height(ht);
+        });
+        $(window).scroll(function () {});
+        $("section").on("mousewheel", function (event, delta) {
+          console.log(delta);
+          if (delta > 0) {
+            if ($(this).next() != undefined) {
+              try {
+                let prev = $(this).prev().offset().top;
+                console.log("prev :" + prev);
+                //문서 전체를 prev에 저장된 위치로 이동
+                $("html,body")
+                  .stop()
+                  .animate({ scrollTop: prev }, 1400, "easeOutBounce");
+              } catch (e) {}
+            }
+            //변수 prev에 현재 휠을 움직인 section에서 이전 section의 offset().top위치 저장
+            //마우스 휠을 내렸을때
+          } else if (delta < 0) {
+            if ($(this).next() != undefined) {
+              try {
+                //변수 next에 현재 휠을 움직인 section에서 다음 section의 offset().top위치 저장
+                let next = $(this).next().offset().top;
+                //문서 전체를 next에 저장된 위치로 이동
+                $("html,body")
+                  .stop()
+                  .animate({ scrollTop: next }, 1400, "easeOutBounce");
+              } catch (e) {}
+            }
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="menu">
+      <li class="on"><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+    <div id="wrap">
+      <section>
+        <article></article>
+      </section>
+      <section>
+        <article></article>
+      </section>
+      <section>
+        <article></article>
+      </section>
+      <section>
+        <article></article>
+      </section>
+    </div>
+  </body>
+</html>
