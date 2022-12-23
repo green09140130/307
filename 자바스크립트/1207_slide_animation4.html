@@ -125,8 +125,8 @@
         //let cloneSlide_last=slideImge[5].cloneNode(true);
         let cloneSlide_last = slides.lastElementChild.cloneNode(true);
         slides.append(cloneSlide_first);
-        slides.prepend(cloneSlide_last);
-        //slides.insertBefore(cloneSlide_last, slides.firstElementChild);
+        //slides.prepend(cloneSlide_last);
+        slides.insertBefore(cloneSlide_last, slides.firstElementChild);
       }
       makeClone();
       function initfunction() {

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      .gallery {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+      .gallery .visual li {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        opacity: 0;
+        transform: translateX(100px);
+        transition: all 1s;
+      }
+      .gallery .visual li.on {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      .gallery .visual li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .btn {
+        width: 100%;
+      }
+      .btn li {
+        position: absolute;
+        text-indent: -9999px;
+        cursor: pointer;
+        z-index: 1;
+        width: 15px;
+        height: 20px;
+        background: url(../images/btns.png);
+        top: 50%;
+      }
+      .btn li.prev {
+        left: 50px;
+        background-position: 0 -45px;
+      }
+      .btn li.next {
+        right: 50px;
+        background-position: -20px -45px;
+      }
+      .page {
+        position: absolute;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+      }
+      .page li {
+        display: inline-block;
+      }
+      .page li a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        text-indent: -9999px;
+      }
+      .page li a:hover,
+      .page li a.on {
+        background: #0ff;
+      }
+    </style>
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        let num = 0;
+        let total = $(".visual li").length;
+        $(".page li").eq(num).find("a").addClass("on");
+        $(".visual li").eq(num).addClass("on");
+        function gallery(i) {
+          $(".page li a").removeClass("on");
+          $(".page li").eq(i).find("a").addClass("on");
+          $(".visual li").removeClass("on");
+          $(".visual li").eq(i).addClass("on");
+        }
+        function gallery_next() {
+          if (num < total - 1) {
+            //0,1,2,3,4,5
+            num++;
+          } else {
+            num = 0;
+          }
+          gallery(num);
+        }
+        function gallery_prev() {
+          if (num > 0) {
+            //0,1,2,3,4,5
+            num--;
+          } else {
+            num = 5;
+          }
+          gallery(num);
+        }
+        let interval = setInterval(gallery_next, 2000);
+        $(".next").click(function () {
+          gallery_next();
+        });
+        $(".prev").click(function () {
+          gallery_prev();
+        });
+        $(".gallery").hover(
+          function () {
+            clearInterval(interval);
+          },
+          function () {
+            interval = setInterval(gallery_next, 2000);
+          }
+        );
+        $(".page li a").click(function (e) {
+          e.preventDefault();
+          let n = $(this).parent().index();
+          num = n;
+          gallery(num);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="gallery">
+      <ul class="btn">
+        <li class="prev">prev</li>
+        <li class="next">next</li>
+      </ul>
+      <ul class="visual">
+        <li><img src="../images/visual1.jpg" alt="visual1" /></li>
+        <li><img src="../images/visual2.jpg" alt="visual2" /></li>
+        <li><img src="../images/visual3.jpg" alt="visual3" /></li>
+        <li><img src="../images/visual4.jpg" alt="visual4" /></li>
+        <li><img src="../images/visual5.jpg" alt="visual5" /></li>
+        <li><img src="../images/visual6.jpg" alt="visual6" /></li>
+      </ul>
+      <ul class="page">
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">6</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
