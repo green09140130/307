@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유동형패턴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font: 1em Arial, "맑은 고딕",돋움, Doctum, sans-serif;
+        }
+       #box_a {
+            height: 400px;
+            background: #aaa;
+        }
+        .list_man{
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        .list_man li {
+            margin: 1%;
+            width: 18%;
+            float: left;
+            background: #fff;
+        }
+        @media screen and (max-width: 1024px) {
+            .list_man{
+                width: 95%;
+            }
+            .list_man li {
+                width: 23%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .list_man li {
+                width: 31.333%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .list_man li {
+                width: 48%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box_a">
+        <ul class="list_man">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+            <li>e</li>
+            <li>f</li>
+            <li>g</li>
+            <li>h</li>
+            <li>i</li>
+            <li>j</li>
+        </ul>
+    </div>
+</body>
+</html>

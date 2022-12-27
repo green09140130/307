@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유동형패턴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font: 1em Arial, "맑은 고딕",돋움, Doctum, sans-serif;
+        }
+        #wrap {
+            width: 80%;
+            margin: 0 auto;
+        }
+        #box_a {
+            width: 20%;
+            height: 400px;
+            float: left;
+            background: #aaa;
+        }
+        .right {
+            float: left;
+            width: 80%;
+        }
+        #box_b {
+            height: 200px;
+            background: #bbb;
+        }
+        #box_c {
+            height: 200px;
+            background: #ccc;
+        }
+        @media screen and (max-width: 1024px) {
+            #wrap {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            #wrap {
+                width: 100%;
+            }
+            #box_a {
+                width: 100%;
+                float: none;
+            }
+            .right {
+                float: none;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            #box_c {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box_a"></div>
+        <div class="right">
+            <div id="box_b"></div>
+            <div id="box_c"></div>
+        </div>
+    </div>
+</body>
+</html>
