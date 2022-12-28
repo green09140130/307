@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고정가변영역</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        body {
+            font: 1em Arial, "맑은 고딕",돋움, Doctum, sans-serif;
+        }
+        #wrap {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        header {
+            background: #aaa;
+            padding: 20px;
+        }
+        section > article {
+            float: right;
+            padding: 200px 20px;
+            box-sizing: border-box;
+        }
+        .left {
+            background: #bbb;
+            width: 10%;
+        }
+        .main {
+            width: 80%;
+            background: #ccc;
+        }
+        .right {
+            width: 10%;
+            background: #ddd;
+        }
+        footer {
+            clear: left;
+            padding: 20px;
+            background: #eee;
+        }
+        @media screen and (max-width: 768px ) {
+            section > article {
+                float: none;
+            }
+            .left,.main,.right {
+                width: 100%;
+                padding: 50px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>header</header>
+        <section>
+            
+            <article class="left">left</article>
+            <article class="main">center</article>
+            <article class="right">right</article>
+        </section>
+        <footer>footer</footer>
+    </div>
+    
+</body>
+</html>
