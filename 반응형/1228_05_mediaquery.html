@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 웹페이지</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    ul{
+      list-style: none;
+    }
+    a{
+      text-decoration: none;
+      color:#333;
+    }
+    body{
+      font-family: Arial, Helvetica, "맑은 고딕",sans-serif;
+    }
+    header{
+      text-align: center;
+      background-color: navy;
+      color: #fff;
+      padding: 20px 0;
+    }
+    .head {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    main {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+    }
+    nav ul {
+      width: 100%;
+      margin: 20px auto 0;
+      border: 1px solid #000;
+    }
+    nav ul li {
+      width: 90%;
+      margin: auto;
+      background-color: lightblue;
+      margin-bottom: 10px;
+      padding:10px 0; 
+      box-shadow: 2px 2px 0 rgba(71, 120, 136, 0.459);
+      cursor: pointer;
+      text-align: center;
+    }
+    section,aside {
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid #000;
+    }
+    aside {
+      background-color: #808080;
+      color : #eee;
+    }
+    aside ul li {
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+    }
+    footer{
+      text-align: center;
+      background-color: #222;
+    }
+    .foot {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      color: #fff;
+      padding: 20px;
+    }
+    @media screen and (max-width: 768px) {
+      main {
+        grid-template-columns: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="head">
+      <h2>대한민국</h2>
+      <h3>(大韓民國/Republic of Korea)</h3>
+    </div>
+  </header>
+  <main>
+    <nav>
+      <ul>
+        <li><a href="#">서울</a></li>
+        <li><a href="#">대전</a></li>
+        <li><a href="#">대구</a></li>
+        <li><a href="#">부산</a></li>
+        <li><a href="#">광주</a></li>
+      </ul>
+    </nav>
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ut magni iste ullam saepe provident velit fugiat nulla id quia. Commodi quisquam adipisci quae amet eaque autem tenetur nisi quos atque blanditiis, numquam ad obcaecati enim reiciendis voluptate vero possimus animi repellendus maxime. Quis maxime nemo magni repellendus sunt quod modi dicta impedit, dignissimos nihil nisi illum amet distinctio quo fuga atque magnam, veniam officiis rerum cupiditate, ullam dolores labore! Modi necessitatibus rem assumenda sed numquam similique? Officia voluptatem dicta ut tenetur soluta, eligendi laudantium! Impedit reiciendis dignissimos nisi ab voluptas. Ullam sequi quaerat nihil eum soluta, vel esse asperiores repellendus! Quos praesentium unde consequatur doloremque cumque? Laboriosam, sit qui hic voluptas, accusantium placeat illo quasi quis exercitationem tenetur suscipit ducimus, dolorum commodi dicta iure repellat ratione vitae assumenda sequi! Dolor asperiores ipsa natus aut sit doloremque? Quae, quod maxime hic illum non nam minima? Perferendis laudantium temporibus id, quibusdam officia sequi eos illum voluptatem alias, mollitia pariatur atque quia voluptatum explicabo unde magni! In dolorum, quam quas voluptatibus natus suscipit laudantium, quasi odit quos obcaecati neque iure laboriosam odio possimus voluptatum pariatur harum doloremque totam sint exercitationem. Mollitia minima iste animi! Quibusdam fugit enim ea voluptate, ullam molestias consequuntur quis praesentium temporibus rerum. Libero, aperiam eum ratione, nesciunt doloribus asperiores quam blanditiis nostrum nemo officia reprehenderit voluptas iure nihil nisi necessitatibus amet accusamus eligendi temporibus debitis commodi maiores illum harum quidem quis. Neque, unde quos rerum reiciendis itaque autem iure natus illum ratione, est numquam eius aperiam mollitia, a porro molestiae voluptatibus! Illo ipsa, voluptas in quae voluptates est odio vitae magni eum asperiores quidem unde obcaecati, totam eos? Quam fuga saepe eveniet modi culpa soluta architecto ratione. Vero obcaecati dicta maxime at aliquam. Quod, delectus? Et earum ab labore atque neque, corrupti, porro voluptatem nulla eligendi est voluptas.
+      </p>
+    </section>
+    <aside>
+      <ul>
+          <li>menu01</li>
+          <li>menu02</li>
+          <li>menu03</li>
+          <li>menu04</li>
+          <li>menu05</li>
+          <li>menu06</li>
+          <li>menu07</li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <div class="foot">footer</div>
+  </footer>
+</body>
+</html>
