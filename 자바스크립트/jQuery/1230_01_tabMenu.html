@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TabMenu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #333;
+      }
+      body {
+        font: 1em Arial, 돋움, Doctum, sans-serif;
+      }
+      .contents {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .contents > div {
+        position: relative;
+        float: left;
+        width: 33.333%;
+      }
+      .tabTitle li {
+        position: absolute;
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #333;
+        background: #ccc;
+        z-index: 1;
+      }
+      .tabTitle li#notice {
+        left: 0;
+      }
+      .tabTitle li#gallery {
+        left: 100px;
+      }
+      .tabTitle li.on {
+        background: #fff;
+        border-bottom-color: #fff;
+      }
+      .tabcon {
+        position: relative;
+        top: 41px;
+        height: 150px;
+        border: 1px solid #333;
+      }
+      .tabcon li.gallery ul {
+        display: flex;
+        height: 150px;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .tabcon li.gallery ul li {
+        width: 120px;
+      }
+      .tabcon li.gallery ul li img {
+        width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contents">
+      <div class="col1">
+        <ul class="tabTitle">
+          <li id="notice">공지사항</li>
+          <li id="gallery">갤러리</li>
+        </ul>
+        <ul class="tabcon">
+          <li class="notice">
+            <table>
+              <tr>
+                <td><a href="#">공지사항입니다.</a></td>
+                <td>2022.12.30</td>
+              </tr>
+              <tr>
+                <td><a href="#">공지사항입니다.</a></td>
+                <td>2022.12.30</td>
+              </tr>
+              <tr>
+                <td><a href="#">공지사항입니다.</a></td>
+                <td>2022.12.30</td>
+              </tr>
+              <tr>
+                <td><a href="#">공지사항입니다.</a></td>
+                <td>2022.12.30</td>
+              </tr>
+            </table>
+          </li>
+          <li class="gallery">
+            <ul>
+              <li><img src="../../images/photo1.jpg" alt="photo1" /></li>
+              <li><img src="../../images/photo2.jpg" alt="photo2" /></li>
+              <li><img src="../../images/photo3.jpg" alt="photo3" /></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="col2"></div>
+      <div class="col3"></div>
+    </div>
+  </body>
+</html>
